@@ -1,0 +1,98 @@
+#! /usr/bin/env python3
+
+import os, sys
+from src.util import Log
+from src.webscraper import get, verify, get_hyper, get_site
+from src.updater import update
+#from src.harvester import harvest
+
+#global vars
+targets:list[str] = []
+rules:list[str] = []
+scan_data:list[str] = []
+h_rules:list[str] = []
+
+def title() -> None:
+	"""Prints out Ascii Art title"""
+	print("\t\t\033[1;92m _____\033[1;93m     _____           _ \n\t\t\033[1;92m|  _  |_ _\033[1;93m'  |  |_ _ ___ _| |\n\t\t\033[1;92m|   __| | |\033[1;93m     | | |   | . |\n\t\t\033[1;92m|__|  |_  |\033[1;93m__|__|___|_|_|___|\n\t\t\033[1;92m      |___|\033[0;0;0m")
+
+
+def display_help() -> None:
+	"""Displays Pyhunds help"""
+	title()
+	print("\n[\033[1;92mPyHund Help\033[0;0;0m]\n\n\033[1;93mUsage\033[0;0m:\n\n\t\033[1;92mPyHund \033[1;96m-t \033[1;93mtargets \033[1;96m-s \033[1;93mscantype \033[1;96m--rule \033[1;93m... \033[1;96m--harvest \033[1;95m%harvester-opt ...\033[0;0m\n\n\033[1;93mRequired Args\033[0;0m:\n  \033[1;96m-t\t\t\033[0;0m[\033[1;92mTarget(s)\033[0;0m] \033[1;93mSets the target or targets to search for\033[0;0m\n  \033[1;96m-s\t\t\033[0;0m[\033[1;92mScantype\033[0;0m] \033[1;93mSets the scantype to be used for scan\033[0;0m\n\n\033[1;93mRules\033[0;0m:\n  \033[1;96m--no-url\t\033[0;0m[\033[1;92mNo Url\033[0;0m] \033[1;93mWill not display the url of the site when found\033[0;0m\n  \033[1;96m--no-err\t\033[0;0m[\033[1;92mNo Error\033[0;0m] \033[1;93mWill not show bad responses\033[0;0m\n  \033[1;96m--log\t\t\033[0;0m[\033[1;92mLogging\033[0;0m] \033[1;93mLogs output to file\033[0;0m\n\n\033[1;93mHarvester\033[0;0m:\n\n  \033[1;95mIf enabled will scrape important data from site pertaining to target\033[0;0m\n\n  \033[1;91m%\033[1;95mhtml\033[1;93m Formats harvested data for html document\033[0;0m\n  \033[1;91m%\033[1;95mraw\033[1;93m Provides no formatting but re-routes output to txt file\033[0;0m\n  \033[1;91m%\033[1;95mjson\033[1;93m formats output to a json format\033[0;0m\n")
+
+def check_args() -> None:
+	"""Checks arguments and sets pertinent data"""
+	
+	if '-t' not in sys.argv or 'help' in sys.argv or len(sys.argv) == 1:
+		display_help()
+		sys.exit()
+
+	global targets
+	global scan_data
+	global rules
+	global harvest
+	global h_rules
+	
+	for t in sys.argv[sys.argv.index('-t') + 1:]:
+		if t.startswith('-'):
+			break
+		targets.append(t)
+	Log(targets)
+
+	if '-S' in sys.argv:
+		for s in sys.argv[sys.argv.index('-S') + 1:]:
+			if s.startswith('-'):
+				break
+			scan_data.append(s.lower())
+	else:
+		scan:str = sys.argv[sys.argv.index('-s') + 1]
+		try:
+			scan_data = open('lib/scans/'+scan, 'r').read().split('\n')
+		except FileNotFoundError:
+			print('\033[1;96mScan not recognised!\033[0;0m')
+			sys.exit()		
+
+	Log(scan_data)
+
+	rules = [ r for r in sys.argv if r.startswith('--') ]
+	Log(rules)
+	if '--harvest' in rules:
+		harvest = True
+		h_rules = [hr for hr in sys.argv if hr.startswith('%') ]
+	Log(h_rules)
+
+def scan_clients() -> None:
+	"""Starts scanning provided clients"""
+
+	for target in targets:
+		print('\033[1;102m'+target+'\033[0;0;0m')
+		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
+			Log(site)
+			data = globals()[get_site(site)["funct"]](site, target)
+			display_response(target, site, data, verify(site, data))
+
+
+def display_response(target:str, site:str, data, is_valid:bool) -> None:
+	"""Displays response for site based on rules"""
+
+	Log('called')
+
+	if not is_valid and '--no-err' not in rules:
+		print(f"\033[1;91m[!] \033[1;93m{site}\033[0;0;0m")
+	elif not is_valid:
+		pass
+	elif is_valid and '--no-url' in rules:
+		print(f"\033[1;102m{target}\033[1;92;0m {site} \033[0;0;0m")
+	else:
+		print(f"\033[1;102m{target}:{site}\033[1;92;0m {data.url} \033[0;0;0m")
+
+def main() -> None:
+	check_args()
+	scan_clients()
+
+if __name__ == '__main__':
+	Log("Debug [\033[1;32mON\033[0;0m]")
+	main()
+	Log("Program Terminated")
