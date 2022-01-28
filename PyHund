@@ -67,7 +67,7 @@ def scan_clients() -> None:
 	"""Starts scanning provided clients"""
 
 	for target in targets:
-		print('\033[1;102m'+target+'\033[0;0;0m')
+		print('\033[1;90;102m'+target+'\033[0;0;0m')
 		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
 			Log(site)
 			data = globals()[get_site(site)["funct"]](site, target)
@@ -84,9 +84,9 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	elif not is_valid:
 		pass
 	elif is_valid and '--no-url' in rules:
-		print(f"\033[1;102m{target}\033[1;92;0m {site} \033[0;0;0m")
+		print(f"\033[1;90;102m{target}\033[1;92;0m {site} \033[0;0;0m")
 	else:
-		print(f"\033[1;102m{target}:{site}\033[1;92;0m {data.url} \033[0;0;0m")
+		print(f"\033[1;90;102m{target}:{site}\033[1;92;0m {data.url} \033[0;0;0m")
 
 def main() -> None:
 	check_args()

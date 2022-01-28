@@ -172,68 +172,69 @@
     }
   },
   "artstation": {
+    "funct": "get_hyper",
     "url": "https://www.artstation.com/{}",
-    "valid": "",
-    "invalid": ["<title>Attention"],
+    "valid": "title>ArtS",
+    "invalid": ["<title>Attention", "404 Error</title"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["Station - ","</tit"],
+      "description": ["name=\"description\" content=\"","\">"],
+      "location": ["user.location\">","</span"]
     }
   },
   "asciinema": {
+    "funct": "get",
     "url": "https://asciinema.org/~{}",
-    "valid": "",
-    "invalid": "",
+    "valid": "asciinema</title>",
+    "invalid": ["way</title>"],
     "harvester_tokens": {
-      "_": "__"
-    }
-  },
-  "ask fedora": {
-    "url": "https://ask.fedoraproject.org/u/{}",
-    "valid": "",
-    "invalid": "",
-    "harvester_tokens": {
-      "_": "__"
+      "username": ["title>","&#"],
+      "joined": ["Joined on ","</small"]
     }
   },
   "askfm": {
+    "funct": "get",
     "url": "https://ask.fm/{}",
-    "valid": "",
-    "invalid": "",
+    "valid": ") - Ask me anything |",
+    "invalid": ["title>Ask and"],
     "harvester_tokens": {
-      "_": "__"
-    }
-  },
-  "atom discussions": {
-    "url": "https://discuss.atom.io/u/{}/summary",
-    "valid": "",
-    "invalid": "",
-    "harvester_tokens": {
-      "_": "__"
+      "username": ["title>"," (@"],
+      "post-count": ["AnswerCount\">", "</d"],
+      "like-count": ["LikeCount\">", "</d"]
     }
   },
   "audio jungle": {
+    "funct": "get",
     "url": "https://audiojungle.net/user/{}",
-    "valid": "",
-    "invalid": "",
+    "valid": "s profile on AudioJungle",
+    "invalid": ["</script><title>Page Not"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["og:title\" content=\"","&#"],
+      "description": ["description\" content=\"","\" />"],
+      "rating": ["is-visually-hidden\">"," stars"],
+      "joined": ["Member since ","    </p>"],
+      "location": ["h-mb0\">        ",","],
+      "sale-count": ["heading -size-m\">      ","    </str"],
+      "follower-count": ["Followers <span class='e-text-label -color-grey-medium -size-s'>","</sp"],
+      "following-count": ["Following <span class='e-text-label -color-grey-medium -size-s'>","</sp"]
     }
   },
   "authorstream": {
+    "funct": "get",
     "url": "http://www.authorstream.com/{}/",
-    "valid": "",
-    "invalid": "",
+    "valid": "Presentations on authorSTREAM",
+    "invalid": ["Error!"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["LeftPanel1_lblname\">","</sp"],
+      "joined": ["LabelJoinDate\">","</sp"]
     }
   },
   "avizo": {
+    "funct": "get",
     "url": "https://www.avizo.cz/{}/",
-    "valid": "",
-    "invalid": "",
-    "harvester_tokens": {
-      "_": "__"
-    }
+    "valid": "<title>",
+    "invalid": ["title>AV"],
+    "harvester_tokens": {}
   },
   "babyblogru": {
     "funct": "get",
@@ -255,21 +256,14 @@
   },
   "babyru": {
     "url": "https://www.baby.ru/u/{}/",
-    "valid": "",
-    "invalid": "",
+    "valid": "title>Мария",
+    "invalid": ["<title>Женский"],
     "harvester_tokens": {
       "_": "__"
     }
   },
   "bandcamp": {
     "url": "https://www.bandcamp.com/{}",
-    "valid": "",
-    "invalid": "",
-    "harvester_tokens": {
-      "_": "__"
-    }
-  },
-    "url": "https://www.baby.ru/u/{}/",
     "valid": "",
     "invalid": "",
     "harvester_tokens": {
@@ -2726,7 +2720,6 @@
     "invalid": "",
     "harvester_tokens": {
       "_": "__"
-    }
     }
   },
   "r6.tracker.network : playstation": {
