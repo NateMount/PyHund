@@ -255,43 +255,43 @@
     }
   },
   "babyru": {
+    "funct": "get",
     "url": "https://www.baby.ru/u/{}/",
     "valid": "title>Мария",
     "invalid": ["<title>Женский"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["www.baby.ru/u/", "/\""],
+      "last-visited": [">Заходила ","</span"]
     }
   },
   "bandcamp": {
+    "funct": "get",
     "url": "https://www.bandcamp.com/{}",
-    "valid": "",
-    "invalid": "",
+    "valid": "collection | Bandcamp</title",
+    "invalid": ["le>Bandcamp</ti"],
     "harvester_tokens": {
-      "_": "__"
-    }
-  },
-  "bandcamp": {
-    "url": "https://www.bandcamp.com/{}",
-    "valid": "",
-    "invalid": "",
-    "harvester_tokens": {
-      "_": "__"
+      "username": ["meta name=\"title\" content=\"","&#"],
+      "genre": ["fav_genre&quot;:&quot;","&quot"],
+      "folloing-band-count": ["following_bands_count&quot;:",",&quot"],
+      "follower-count": ["followers_count&quot;:",",&quot"],
+      "location": ["location&quot;:&quot;","&quot"]
     }
   },
   "bazar.cz": {
+    "funct": "get",
     "url": "https://www.bazar.cz/{}/",
-    "valid": "",
-    "invalid": "",
+    "valid": " - Bazar.cz",
+    "invalid": ["Neexistující stránka - Bazar.cz"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["&nbsp;<b>","</b"]
     }
   },
   "behance": {
     "url": "https://www.behance.net/{}",
-    "valid": "",
-    "invalid": "",
+    "valid": "on Behance</ti",
+    "invalid": ["Oops! We can’t find that page.</ti"],
     "harvester_tokens": {
-      "_": "__"
+      "username": ["<title>"," on Behance<"]
     }
   },
   "bianarysearch": {

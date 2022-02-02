@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import json
+import bs4
 from src.util import Log
 
 #Global Variables

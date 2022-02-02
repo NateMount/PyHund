@@ -2,10 +2,10 @@
 
 import json
 import requests as r
+from bs4 import BeautifulSoup
 from src.util import Log
 
 #TODO remove after no longer needed
-#spoof_head:dict = {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","Accept-Encoding": "gzip, deflate, br","Accept-Language": "en-US,en;q=0.9","Sec-Fetch-User": "?1","Upgrade-Insecure-Requests": "1",'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 site_index:dict = json.load(open("lib/manifest.json","r"))
 
 def get_site(site_name:str) -> dict:
@@ -13,7 +13,6 @@ def get_site(site_name:str) -> dict:
 	try:
 		return site_index[site_name]
 	except KeyError:
-		Log(site_name)
 		return None
 
 
@@ -37,7 +36,6 @@ def get(site_name:str, username:str):
 	try:
 		return r.get(site_data["url"].format(username), headers=site_head)
 	except r.ConnectionError:
-		Log(site_data)
 		return None
 
 
@@ -48,7 +46,9 @@ def verify(site_name, site) -> bool:
 
 	#Reformatting site info for more precise data
 	site_data = get_site(site_name)
-	site_text = site.text.replace('\n', '')
+	
+	soup = BeautifulSoup(site.txt, 'html.parser')
+	
 
 	is_invalid = False
 
