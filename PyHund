@@ -2,7 +2,8 @@
 
 import os, sys
 from src.util import Log
-from src.webscraper import get, verify, get_hyper, get_site
+from src.webscraper import get, get_hyper, get_site
+from src.validator import verify
 from src.updater import update
 #from src.harvester import harvest
 
@@ -18,7 +19,7 @@ def title() -> None:
 
 
 def display_help() -> None:
-	"""Displays Pyhunds help"""
+	"""Displays Pyhund's help"""
 	title()
 	print("\n[\033[1;92mPyHund Help\033[0;0;0m]\n\n\033[1;93mUsage\033[0;0m:\n\n\t\033[1;92mPyHund \033[1;96m-t \033[1;93mtargets \033[1;96m-s \033[1;93mscantype \033[1;96m--rule \033[1;93m... \033[1;96m--harvest \033[1;95m%harvester-opt ...\033[0;0m\n\n\033[1;93mRequired Args\033[0;0m:\n  \033[1;96m-t\t\t\033[0;0m[\033[1;92mTarget(s)\033[0;0m] \033[1;93mSets the target or targets to search for\033[0;0m\n  \033[1;96m-s\t\t\033[0;0m[\033[1;92mScantype\033[0;0m] \033[1;93mSets the scantype to be used for scan\033[0;0m\n\n\033[1;93mRules\033[0;0m:\n  \033[1;96m--no-url\t\033[0;0m[\033[1;92mNo Url\033[0;0m] \033[1;93mWill not display the url of the site when found\033[0;0m\n  \033[1;96m--no-err\t\033[0;0m[\033[1;92mNo Error\033[0;0m] \033[1;93mWill not show bad responses\033[0;0m\n  \033[1;96m--log\t\t\033[0;0m[\033[1;92mLogging\033[0;0m] \033[1;93mLogs output to file\033[0;0m\n\n\033[1;93mHarvester\033[0;0m:\n\n  \033[1;95mIf enabled will scrape important data from site pertaining to target\033[0;0m\n\n  \033[1;91m%\033[1;95mhtml\033[1;93m Formats harvested data for html document\033[0;0m\n  \033[1;91m%\033[1;95mraw\033[1;93m Provides no formatting but re-routes output to txt file\033[0;0m\n  \033[1;91m%\033[1;95mjson\033[1;93m formats output to a json format\033[0;0m\n")
 
@@ -70,14 +71,20 @@ def scan_clients() -> None:
 		print('\033[1;90;102m'+target+'\033[0;0;0m')
 		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
 			Log(site)
-			data = globals()[get_site(site)["funct"]](site, target)
+			site_data:dict = getsite(site)
+			if site_data['http-version'] == 1:
+				pass
+			elif site_data['http-version'] == 2:
+				pass
+			else:
+				Log("Unknown http-version", site_data['http-version'])
+				continue
+
 			display_response(target, site, data, verify(site, data))
 
 
 def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	"""Displays response for site based on rules"""
-
-	Log('called')
 
 	if not is_valid and '--no-err' not in rules:
 		print(f"\033[1;91m[!] \033[1;93m{site}\033[0;0;0m")
