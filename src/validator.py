@@ -13,6 +13,6 @@ def verify(site_name:str, site) -> bool:
 	elif site_data['verify-method'] == 'url':
 		return site_data['valid-str'] in site.url
 	elif site_data['verify-method'] == 'match':
-		return re.search(site_data['verify-method'], site.text) != None
+		return re.search(site_data['verify-str'], site.text) != None
 	else:
 		return False
