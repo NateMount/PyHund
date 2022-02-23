@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 import json
-import bs4
+import re
 from src.util import Log
 
 #Global Variables
@@ -41,16 +41,15 @@ def harvest(site_name:str, html_content:str) -> dict:
 	:returns: dictionary containing all parsed content
 	"""
 
-	data:dict = {}
 	tokens:dict = site_tokens[site_name]
 	Log(tokens)
 
-	for token_set in tokens:
-		Log(token_set, tokens[token_set])
+	data:dict = {token:re.search(tokens[token], html_content) for token in tokens if token}
 
-		segment:str = html_content.split(tokens[token_set][0])[-1].split(tokens[token_set][-1])[0]
-
-		data[token_set] = segment
+	#for token in tokens:
+	#	Log(token_set, tokens[token])
+	#	segment:str = re.search(tokens[token], html_content)
+	#	data[token_set] = segment
 
 	Log(data)
 
