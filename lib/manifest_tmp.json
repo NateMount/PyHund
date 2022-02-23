@@ -1,0 +1,68 @@
+{
+	"rive": {
+		"http-version": 2,
+		"url": "https://rive.app/a/{}",
+		"verify-method": "match",
+		"verify-str": "title>Rive",
+		"harvester-tokens": {}
+	},
+	"7cups": {
+		"http-version": 1,
+		"url": "https://www.7cups.com/@{}",
+		"verify-method": "status",
+		"harvester-tokens": {
+			"username": "(?<=title).+(?=L)",
+			"level": "(?<=Listener - ).+(?=<span)",
+			"rating-count": "(?<=Ratings.+class=\"data\">)\d+(?=<)",
+			"review-count": "(?<=Reviews.+class=\"data\">)\d+(?=<)",
+			"languages": "(?<=Languages.+class=\"data\">)\w+(?=<)",
+			"gender": "(?<=Gender.+class=\"data\">)\w+(?=<\/td)",
+			"people-helped": "(?<=Helped.+class=\"data\">)\w+(?=<\/td)",
+			"message-count": "(?<=>Chats.+class=\"data\">)\d+(?=<\/td)",
+			"post-count": "(?<=Posts.+class=\"data\">)\d+(?=<\/td)"
+		}
+	},
+	"9gag": {
+		"http-version": 2,
+		"url": "https://www.9gag.com/u/{}",
+		"verify-method": "status",
+		"harvester_tokens": {}
+	},
+	"about.me": {
+		"http-version": 1,
+		"url": "https://about.me/{}",
+		"verify-method": "status",
+		"harvester-tokens": {
+			"username": "(?<=title>)[a-zA-Z ]+(?= \- )",
+			"location": "(?<= \- )[a-zA-Z ,.]+(?= \| )"
+		}
+	},
+	"academia.edu": {
+		"http-version": 1,
+		"url": "https://independent.academia.edu/{}",
+		"verify-method": "status",
+		"harvester-tokens": {
+			"username": "(?<=title>)[a-zA-Z ,.]+(?= - )",
+			"follower-count": "(?<=followers-count.+700\">)\d+(?=<)",
+			"following-count": "(?<=followees-count.+700\">)\d+(?=<)"
+		}
+	},
+	"airliners": {
+		"http-version": 1,
+		"url": "https://www.airliners.net/user/{}/profile",
+		"verify-method": "status",
+		"harvester-tokens": {
+			"username": "(?<=photos\">)\w+(?=<\/a><\/div>)",
+			"follower-count": "(?<=\">)\d+(?= Follower)",
+			"following-count": "(?<=\">)\d+(?= Following)",
+			"joined": "(?<=Joined )\w+ \d+(?= +<\/li><)",
+			"description": "(?<=up-biography\"\> )[a-zA-Z,. ]+(?= )"
+		}
+	},
+	"akniga": {
+		"http-version": 1,
+		"url": "https://akniga.org/profile/{}",
+		"verify-method": "",
+		"harvester-tokens": {}
+	}
+}
