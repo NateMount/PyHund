@@ -64,5 +64,65 @@
 		"url": "https://akniga.org/profile/{}",
 		"verify-method": "",
 		"harvester-tokens": {}
+	},
+	"alik.cz": {
+		"http-version": 1,
+		"url": "https://www.alik.cz/u/{}",
+		"verify-method": "",
+		"harvester-tokens": {}
+	},
+	"allmylinks": {
+		"http-version": 1,
+		"url": "https://allmylinks.com/{}",
+		"verify-method": "",
+		"harvester-tokens": {}
+	},
+	"aminoapp": {
+		"http-version": 1,
+		"url": "https://aminoapps.com/u/{}",
+		"verify-method": "",
+		"harvester-tokens": {}
+	},
+	"anilist": {
+		"http-version": 1,
+		"url": "https://anilist.co/user/{}/",
+		"verify-method": "",
+		"harvester-tokens": {}
+	},
+	"apple developer": {
+		"http-version": 1,
+		"url": "https://developer.apple.com/forums/profile/{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
+	},
+	"apple discussions": {
+		"http-version": 1,
+		"url": "https://discussions.apple.com/profile/{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
+	},
+	"archive.org": {
+		"http-version": 1,
+		"url": "https://archive.org/details/@{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
+	},
+	"arduino": {
+		"http-version": 1,
+		"url": "https://create.arduino.cc/projecthub/{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
+	},
+	"artstation": {
+		"http-version": 2,
+		"url": "https://www.artstation.com/{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
+	},
+	"asciinema": {
+		"http-version": 1,
+		"url": "https://asciinema.org/~{}",
+		"verify-method": "status",
+		"harvester-tokens": {}
 	}
 }
