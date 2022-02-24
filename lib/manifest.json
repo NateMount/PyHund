@@ -2343,5 +2343,5 @@
 		"verify-method": "status",
 		"verify-str": "",
 		"harvester-tokens": {}
-	},
+	}
 }
