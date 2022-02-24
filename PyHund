@@ -71,11 +71,11 @@ def scan_clients() -> None:
 		print('\033[1;90;102m'+target+'\033[0;0;0m')
 		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
 			Log(site)
-			site_data:dict = getsite(site)
+			site_data:dict = get_site(site)
 			if site_data['http-version'] == 1:
-				pass
+				data = get(site, target)
 			elif site_data['http-version'] == 2:
-				pass
+				data = get_hyper(site, target)
 			else:
 				Log("Unknown http-version", site_data['http-version'])
 				continue
