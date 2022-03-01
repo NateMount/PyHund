@@ -1,0 +1,97 @@
+#! /usr/bin/env python3
+
+import os, sys
+import re
+
+import requests as r
+import socket as sk
+
+#------ Function Body ------#
+
+def Log(*args, **kwargs) -> None:
+	"""Used to log debug statements to stdout"""
+	if '--debug' in sys.argv:
+		print('DEBUG::',*args,**kwargs)
+
+
+def display(*args, **kwargs):
+	"""Used to put strings to stdout"""
+	if '--no-print' not in sys.argv:
+		print(*args, **kwargs)
+
+
+def display_help():
+	"""Used to show help for tool"""
+	print("""
+makesite help
+
+usage::	makesite url [-args [opts]] [--rules]
+
+url::
+	must be in format of `http(s)://sitename.ext/{}`
+	example - https://myspace.com/{}
+	NOTE - {} demark where the username will be replaced
+
+args::
+	-h	displays help page (this)
+	-n	gives a known name to check for on site to make validation [Default=john]
+	-s	gives a site name to be linked to url [Default=Content between https:// and .]
+	-v	gives http-version !!!Only Use if you Know the Version!!! [Default=1]
+	-u	gives the file to append site to after checking
+	-o	gives file to write to after checking site
+
+rules::
+	--no-print	disables print functions for tool
+	--no-ping	disables initial ping to site
+	--no-ver-scan	disables http-version detection
+	--debug		sets tool to debug mode
+""")
+
+def get_site_differential(url) -> dict:
+	"""Will check both good and bad name for site and find differenced inbetween"""
+	diff:dict = {
+		"GOOD":{}
+		"BAD":{}
+	}
+
+	return diff
+
+def check_http_version(site) -> int:
+	"""Will try to detect the http-version required to access site"""
+	if '--no-ver-scan' in sys.argv:
+		Log('http-version detection disabled')
+		return 1
+	else:
+		return 1
+
+def check_validation_method(site_data:dict) -> str:
+	"""Will try to detect an accurate validation method for site"""
+	
+	if site_data['GOOD']['status'] != site_data['BAD']['status']:
+		Log('status validation detected')
+		return 'status'
+
+	elif site_data['GOOD']['url'] != site_data['BAD']['url']:
+		Log('url validation detected')
+		return 'url'
+
+	Log('match fallback used')
+	return 'match'
+
+def check_validation_str(site) -> str:
+	"""Will try to detect a validation string for potential use"""
+	#IF STATUS : IF STATUS != 200 return GOOD STATUS
+	#ELSE IF URL : FIND DIFF IN URL
+	#ELSE : TRY FIND DIFF IN EITHER [TITLE / OG: / DIV]
+	return ''
+
+def main():
+	
+	if '-h' in sys.argv or len(args) == 0:
+		display_help()
+		sys.exit()
+
+	Log('[ON]')
+
+	
+
