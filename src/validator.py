@@ -9,6 +9,8 @@ def verify(site_name:str, site) -> bool:
 	site_data:dict = webscraper.get_site(site_name)
 	
 	if site_data['verify-method'] == 'status':
+		if 'verify-str' in site_data:
+			return site.status_code == int(site_data['verify-str'])
 		return site.status_code == 200
 	elif site_data['verify-method'] == 'url':
 		return site_data['valid-str'] in site.url
