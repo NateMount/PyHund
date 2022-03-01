@@ -6,6 +6,8 @@ import re
 import requests as r
 import socket as sk
 
+UNKNOWN_USR:str = 'N01w0Od3vErU$eth1ss01001010'
+
 #------ Function Body ------#
 
 def Log(*args, **kwargs) -> None:
