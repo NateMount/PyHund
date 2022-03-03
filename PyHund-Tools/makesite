@@ -7,6 +7,9 @@ import requests as r
 import socket as sk
 
 UNKNOWN_USR:str = 'N01w0Od3vErU$eth1ss01001010'
+HEADERS:dict = {
+	
+}
 
 #------ Function Body ------#
 
@@ -49,12 +52,25 @@ rules::
 	--debug		sets tool to debug mode
 """)
 
-def get_site_differential(url) -> dict:
+def get_site_differential(url:str, good_name:str) -> dict:
 	"""Will check both good and bad name for site and find differenced inbetween"""
 	diff:dict = {
 		"GOOD":{}
 		"BAD":{}
 	}
+
+	try:
+		good_headless = r.get(url.format(good_name))
+		good = r.get(url.format(good_name), headers=HEADERS)
+	
+		bad_headless = r.get(url.format(UNKNOWN_USR))
+		bad = r.get(url.format(UNKNOWN_USR), headers=HEADERS)
+	
+		diff['GOOD'] = {'url':good_headless.url, 'status':good_headless.status_code, 'head - url':good.url, 'head - status': good.status_code}
+		diff['BAD'] = {'url':bad_headless.url, 'status':bad_headless.status_code, 'head - url':bad.url, 'head - status': bad.status_code}
+
+	except r.exceptions.ConnectionError:
+		display('Site could not be located')
 
 	return diff
 
