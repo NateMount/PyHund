@@ -1,0 +1,43 @@
+#! /usr/bin/env python3
+
+import os, sys
+
+def interactive() -> None:
+
+	sites:set[str] = {}
+
+	while True:
+		userin = input('>> ').split()
+
+		if len(userin) == 0:
+			pass
+		elif userin[0] == 'quit':
+			break
+		elif userin[0] == 'add':
+			if len(userin) <= 2:
+				print("Invalid Usecase!\tUSE add [site/lib] `name`")
+			else:
+				if userin[1] == 'lib':
+					if userin[2] in os.listdir():
+						for site in open(userin[2], 'r').read().split('\n'):
+							sites.add(site)
+					else:
+						print("Library not recognized!")
+				else:
+					pass
+
+def genscan() -> None:
+	pass
+
+def display_help() -> None:
+	"""Used to display help message to terminal"""
+	print('makescan - help')
+
+if __name_ == '__main__':
+	if '-I' in sys.argv:
+		interactive()
+	elif '-n' in sys.argv and ('-i' in sys.argv or '-u' in sys.argv):
+		genscan(*sys.argv[1:])
+	else:
+		display_help()
+	sys.exit()
