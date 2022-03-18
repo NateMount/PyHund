@@ -66,8 +66,8 @@ def get_site_differential(url:str, good_name:str) -> dict:
 		bad_headless = r.get(url.format(UNKNOWN_USR))
 		bad = r.get(url.format(UNKNOWN_USR), headers=HEADERS)
 	
-		diff['GOOD'] = {'url':good_headless.url, 'status':good_headless.status_code, 'head - url':good.url, 'head - status': good.status_code}
-		diff['BAD'] = {'url':bad_headless.url, 'status':bad_headless.status_code, 'head - url':bad.url, 'head - status': bad.status_code}
+		diff['GOOD'] = {':u':good_headless.url, ':s':good_headless.status_code, ':hu':good.url, ':hs': good.status_code}
+		diff['BAD'] = {':u':bad_headless.url, ':s':bad_headless.status_code, ':hu':bad.url, ':hs': bad.status_code}
 
 	except r.exceptions.ConnectionError:
 		display('Site could not be located')
@@ -80,16 +80,16 @@ def check_http_version(site) -> int:
 		Log('http-version detection disabled')
 		return 1
 	else:
-		return 1
+		return 2 if (site['GOOD'][':s'] == site['GOOD'][':hs'] and site['BAD'][':s'] == site['BAD'][':hs'] and site['BAD'][':s'] == site['GOOD'][':s'] and site['GOOD'][':s'] in ('404','403')) else 1
 
 def check_validation_method(site_data:dict) -> str:
 	"""Will try to detect an accurate validation method for site"""
 	
-	if site_data['GOOD']['status'] != site_data['BAD']['status']:
+	if site_data['GOOD'][':s'] != site_data['BAD'][':s']:
 		Log('status validation detected')
 		return 'status'
 
-	elif site_data['GOOD']['url'] != site_data['BAD']['url']:
+	elif site_data['GOOD'][':u'] != site_data['BAD'][':u']:
 		Log('url validation detected')
 		return 'url'
 
