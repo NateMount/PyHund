@@ -60,7 +60,7 @@ def check_args() -> None:
 		try:
 			scan_data = open('lib/scans/'+scan, 'r').read().split('\n')
 		except FileNotFoundError:
-			print('\033[1;96mScan not recognised!\033[0;0m')
+			print(f'{C1}Scan not recognised!\033[0;0m')
 			sys.exit()		
 
 	Log(scan_data)
@@ -76,7 +76,7 @@ def scan_clients() -> None:
 	"""Starts scanning provided clients"""
 
 	for target in targets:
-		print('\033[1;90;102m'+target+'\033[0;0;0m')
+		print(C5+target+'\033[0;0;0m')
 		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
 			Log(site)
 			site_data:dict = get_site(site)
@@ -85,7 +85,7 @@ def scan_clients() -> None:
 			elif site_data['http-version'] == 2:
 				data = get_hyper(site, target)
 			else:
-				Log("Unknown http-version", site_data['http-version'])
+				Log(f"{C1}Unknown http-version{C3}", site_data['http-version'], '\033[0m')
 				continue
 
 			display_response(target, site, data, verify(site, data))
@@ -95,19 +95,19 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	"""Displays response for site based on rules"""
 
 	if not is_valid and '--no-err' not in rules:
-		print(f"\033[1;91m[!] \033[1;93m{site}\033[0;0;0m")
+		print(f"{C1}[!] {C3}{site}\033[0;0;0m")
 	elif not is_valid:
 		pass
 	elif is_valid and '--no-url' in rules:
-		print(f"\033[1;90;102m{target}\033[1;92;0m {site} \033[0;0;0m")
+		print(f"{C5}{target}{C3} {site} \033[0;0;0m")
 	else:
-		print(f"\033[1;90;102m{target}:{site}\033[1;92;0m {data.url} \033[0;0;0m")
+		print(f"{C5}{target}:{C3}{site}{C4} {data.url} \033[0;0;0m")
 
 def main() -> None:
 	check_args()
 	scan_clients()
 
 if __name__ == '__main__':
-	Log("Debug [\033[1;32mON\033[0;0m]")
+	Log(f"Debug [{C5}ON\033[0;0m]")
 	main()
 	Log("Program Terminated")
