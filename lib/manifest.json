@@ -1,953 +1,816 @@
 {
-	"rive": {
-		"http-version": 2,
-		"url": "https://rive.app/a/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"3dnews": {
-		"http-version": 1,
-		"url": "http://forum.3dnews.ru/member.php?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"7cups": {
-		"http-version": 1,
-		"url": "https://www.7cups.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"9gag": {
-		"http-version": 2,
-		"url": "https://www.9gag.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"about.me": {
-		"http-version": 1,
-		"url": "https://about.me/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"academia.edu": {
-		"http-version": 1,
-		"url": "https://independent.academia.edu/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"airliners": {
-		"http-version": 1,
-		"url": "https://www.airliners.net/user/{}/profile/photos",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"akniga": {
-		"http-version": 1,
-		"url": "https://akniga.org/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"alik.cz": {
-		"http-version": 1,
-		"url": "https://www.alik.cz/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"allmylinks": {
-		"http-version": 1,
-		"url": "https://allmylinks.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"aminoapp": {
-		"http-version": 1,
-		"url": "https://aminoapps.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"anilist": {
-		"http-version": 1,
-		"url": "https://anilist.co/user/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"apple developer": {
-		"http-version": 1,
-		"url": "https://developer.apple.com/forums/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"apple discussions": {
-		"http-version": 1,
-		"url": "https://discussions.apple.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"archive.org": {
-		"http-version": 1,
-		"url": "https://archive.org/details/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"arduino": {
-		"http-version": 1,
-		"url": "https://create.arduino.cc/projecthub/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"artstation": {
-		"http-version": 2,
-		"url": "https://www.artstation.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"asciinema": {
-		"http-version": 1,
-		"url": "https://asciinema.org/~{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"askfm": {
-		"http-version": 1,
-		"url": "https://ask.fm/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"audio jungle": {
-		"http-version": 1,
-		"url": "https://audiojungle.net/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"authorstream": {
-		"http-version": 1,
-		"url": "http://www.authorstream.com/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"avizo": {
-		"http-version": 1,
-		"url": "https://www.avizo.cz/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"babyblogru": {
-		"http-version": 1,
-		"url": "https://www.babyblog.ru/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"babyru": {
-		"http-version": 1,
-		"url": "https://www.baby.ru/u/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bandcamp": {
-		"http-version": 1,
-		"url": "https://www.bandcamp.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bazar.cz": {
-		"http-version": 1,
-		"url": "https://www.bazar.cz/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"behance": {
-		"http-version": 1,
-		"url": "https://www.behance.net/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bianarysearch": {
-		"http-version": 1,
-		"url": "https://binarysearch.io/@/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bitbucket": {
-		"http-version": 1,
-		"url": "https://bitbucket.org/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bitcoinforum": {
-		"http-version": 1,
-		"url": "https://bitcoinforum.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bitwarden forum": {
-		"http-version": 1,
-		"url": "https://community.bitwarden.com/u/{}/summary",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"blip.fm": {
-		"http-version": 1,
-		"url": "https://blip.fm/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"blogger": {
-		"http-version": 1,
-		"url": "https://{}.blogspot.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bodybuilding": {
-		"http-version": 1,
-		"url": "https://bodyspace.bodybuilding.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bongacams": {
-		"http-version": 1,
-		"url": "https://pt.bongacams.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"bookcrossing": {
-		"http-version": 1,
-		"url": "https://www.bookcrossing.com/mybookshelf/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"booth": {
-		"http-version": 1,
-		"url": "https://{}.booth.pm/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"buymeacoffee": {
-		"http-version": 1,
-		"url": "https://buymeacoff.ee/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"buzzfeed": {
-		"http-version": 1,
-		"url": "https://buzzfeed.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"capfriendly": {
-		"http-version": 1,
-		"url": "https://www.capfriendly.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"carbonmade": {
-		"http-version": 1,
-		"url": "https://{}.carbonmade.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"career.habr": {
-		"http-version": 1,
-		"url": "https://career.habr.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"championat": {
-		"http-version": 1,
-		"url": "https://www.championat.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"chaos.social": {
-		"http-version": 1,
-		"url": "https://chaos.social/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"chatujme.cz": {
-		"http-version": 1,
-		"url": "https://profil.chatujme.cz/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"chaturbate": {
-		"http-version": 1,
-		"url": "https://chaturbate.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"chess": {
-		"http-version": 1,
-		"url": "https://www.chess.com/member/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"cloudflarecommunity": {
-		"http-version": 1,
-		"url": "https://community.cloudflare.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"clozemaster": {
-		"http-version": 1,
-		"url": "https://www.clozemaster.com/players/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"cnet": {
-		"http-version": 1,
-		"url": "https://www.cnet.com/profiles/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"codecademy": {
-		"http-version": 1,
-		"url": "https://www.codecademy.com/profiles/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"codechef": {
-		"http-version": 1,
-		"url": "https://www.codechef.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"codepen": {
-		"http-version": 1,
-		"url": "https://codepen.io/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"codewars": {
-		"http-version": 1,
-		"url": "https://www.codewars.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"coil": {
-		"http-version": 1,
-		"url": "https://coil.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"colourlovers": {
-		"http-version": 1,
-		"url": "https://www.colourlovers.com/lover/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"contently": {
-		"http-version": 1,
-		"url": "https://{}.contently.com/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"coroflot": {
-		"http-version": 1,
-		"url": "https://www.coroflot.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"couchsurfing": {
-		"http-version": 1,
-		"url": "https://www.couchsurfing.com/people/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"countable": {
-		"http-version": 1,
-		"url": "https://www.countable.us/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"cracked": {
-		"http-version": 1,
-		"url": "https://www.cracked.com/members/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"crevado": {
-		"http-version": 1,
-		"url": "https://{}.crevado.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"crowdin": {
-		"http-version": 1,
-		"url": "https://crowdin.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"d3ru": {
-		"http-version": 1,
-		"url": "https://d3.ru/user/{}/posts",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"dailykos": {
-		"http-version": 1,
-		"url": "https://www.dailykos.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"dailymotion": {
-		"http-version": 1,
-		"url": "https://www.dailymotion.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"datingru": {
-		"http-version": 1,
-		"url": "http://dating.ru/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"designspiration": {
-		"http-version": 1,
-		"url": "https://www.designspiration.net/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"dev community": {
-		"http-version": 1,
-		"url": "https://dev.to/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"devientart": {
-		"http-version": 1,
-		"url": "https://{}.deviantart.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"devrant": {
-		"http-version": 1,
-		"url": "https://devrant.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"discogs": {
-		"http-version": 1,
-		"url": "https://www.discogs.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"discuss.elastic.co": {
-		"http-version": 1,
-		"url": "https://discuss.elastic.co/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"disqus": {
-		"http-version": 1,
-		"url": "https://disqus.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"dockerhub": {
-		"http-version": 1,
-		"url": "https://hub.docker.com/u/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"dribble": {
-		"http-version": 1,
-		"url": "https://dribbble.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"drive2": {
-		"http-version": 1,
-		"url": "https://www.drive2.ru/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"duolingo": {
-		"http-version": 1,
-		"url": "https://www.duolingo.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"egpu": {
-		"http-version": 1,
-		"url": "https://egpu.io/forums/profile/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"eintracht": {
-		"http-version": 1,
-		"url": "https://community.eintracht.de/fans/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"ello": {
-		"http-version": 1,
-		"url": "https://ello.co/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"etsy": {
-		"http-version": 1,
-		"url": "https://www.etsy.com/shop/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"euw": {
-		"http-version": 1,
-		"url": "https://euw.op.gg/summoner/userName={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"eyeem": {
-		"http-version": 1,
-		"url": "https://www.eyeem.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"f3.cool": {
-		"http-version": 1,
-		"url": "https://f3.cool/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"facebook": {
-		"http-version": 1,
-		"url": "https://www.facebook.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"facenama": {
-		"http-version": 1,
-		"url": "https://facenama.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fancentro": {
-		"http-version": 1,
-		"url": "https://fancentro.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fandom": {
-		"http-version": 1,
-		"url": "https://www.fandom.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fiverr": {
-		"http-version": 1,
-		"url": "https://www.fiverr.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fixya": {
-		"http-version": 1,
-		"url": "https://www.fixya.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fl": {
-		"http-version": 1,
-		"url": "https://www.fl.ru/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"flickr": {
-		"http-version": 1,
-		"url": "https://www.flickr.com/people/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"flightradar24": {
-		"http-version": 1,
-		"url": "https://my.flightradar24.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"flipboard": {
-		"http-version": 1,
-		"url": "https://flipboard.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"football": {
-		"http-version": 1,
-		"url": "https://www.rusfootball.info/user/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fortnitetracker": {
-		"http-version": 1,
-		"url": "https://fortnitetracker.com/profile/all/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"forum.escapefromtarkov.com": {
-		"http-version": 1,
-		"url": "",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"forum_guns": {
-		"http-version": 1,
-		"url": "https://forum.guns.ru/forummisc/blog/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"forumhouseru": {
-		"http-version": 1,
-		"url": "https://www.forumhouse.ru/members/?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"fosstodon": {
-		"http-version": 1,
-		"url": "https://fosstodon.org/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"freelance.habr": {
-		"http-version": 1,
-		"url": "https://freelance.habr.com/freelancers/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"freelancer": {
-		"http-version": 1,
-		"url": "https://www.freelancer.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"freesound": {
-		"http-version": 1,
-		"url": "https://freesound.org/people/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gaiaonline": {
-		"http-version": 1,
-		"url": "https://www.gaiaonline.com/profiles/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gam1ng": {
-		"http-version": 1,
-		"url": "https://gam1ng.com.br/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gamespot": {
-		"http-version": 1,
-		"url": "https://www.gamespot.com/profile/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"geocaching": {
-		"http-version": 1,
-		"url": "https://www.geocaching.com/p/default.aspx?u={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"getmyuni": {
-		"http-version": 1,
-		"url": "https://www.getmyuni.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gfycat": {
-		"http-version": 1,
-		"url": "https://gfycat.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"giphy": {
-		"http-version": 1,
-		"url": "https://giphy.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gitee": {
-		"http-version": 1,
-		"url": "https://gitee.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"github": {
-		"http-version": 1,
-		"url": "https://www.github.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"github support community": {
-		"http-version": 1,
-		"url": "https://github.community/u/{}/summary",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gitlab": {
-		"http-version": 1,
-		"url": "https://gitlab.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gnome vcs": {
-		"http-version": 1,
-		"url": "https://gitlab.gnome.org/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"goodreads": {
-		"http-version": 1,
-		"url": "https://www.goodreads.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gradle": {
-		"http-version": 1,
-		"url": "https://plugins.gradle.org/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gravatar": {
-		"http-version": 1,
-		"url": "http://en.gravatar.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gumroad": {
-		"http-version": 1,
-		"url": "https://www.gumroad.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gunsandammo": {
-		"http-version": 1,
-		"url": "https://forums.gunsandammo.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"gurushots": {
-		"http-version": 1,
-		"url": "https://gurushots.com/{}/photos",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"habr": {
-		"http-version": 1,
-		"url": "https://career.habr.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackaday": {
-		"http-version": 1,
-		"url": "https://hackaday.io/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackerearth": {
-		"http-version": 1,
-		"url": "https://hackerearth.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackernews": {
-		"http-version": 1,
-		"url": "https://news.ycombinator.com/user?id={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackerone": {
-		"http-version": 1,
-		"url": "https://hackerone.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackerrank": {
-		"http-version": 1,
-		"url": "https://hackerrank.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackster": {
-		"http-version": 1,
-		"url": "https://www.hackster.io/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hackthebox": {
-		"http-version": 1,
-		"url": "https://forum.hackthebox.eu/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"hexrpg": {
-		"http-version": 1,
-		"url": "https://www.hexrpg.com/userinfo/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"houzz": {
-		"http-version": 1,
-		"url": "https://houzz.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
+  "rive": {
+      "http-version": 2,
+      "url": "https://rive.app/a/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "3dnews": {
+      "http-version": 1,
+      "url": "http://forum.3dnews.ru/member.php?username={}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "7cups": {
+      "http-version": 1,
+      "url": "https://www.7cups.com/@{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "9gag": {
+      "http-version": 2,
+      "url": "https://www.9gag.com/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "about.me": {
+      "http-version": 1,
+      "url": "https://about.me/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "academia.edu": {
+      "http-version": 1,
+      "url": "https://independent.academia.edu/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "airliners": {
+      "http-version": 1,
+      "url": "https://www.airliners.net/user/{}/profile/photos",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "akniga": {
+      "http-version": 1,
+      "url": "https://akniga.org/profile/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "alik.cz": {
+      "http-version": 1,
+      "url": "https://www.alik.cz/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "allmylinks": {
+      "http-version": 1,
+      "url": "https://allmylinks.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "aminoapp": {
+      "http-version": 1,
+      "url": "https://aminoapps.com/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "anilist": {
+      "http-version": 1,
+      "url": "https://anilist.co/user/{}/",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "apple developer": {
+      "http-version": 1,
+      "url": "https://developer.apple.com/forums/profile/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "apple discussions": {
+      "http-version": 1,
+      "url": "https://discussions.apple.com/profile/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "archive.org": {
+      "http-version": 1,
+      "url": "https://archive.org/details/@{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "arduino": {
+      "http-version": 1,
+      "url": "https://create.arduino.cc/projecthub/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "artstation": {
+      "http-version": 2,
+      "url": "https://www.artstation.com/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "asciinema": {
+      "http-version": 1,
+      "url": "https://asciinema.org/~{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "askfm": {
+      "http-version": 1,
+      "url": "https://ask.fm/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "audio jungle": {
+      "http-version": 1,
+      "url": "https://audiojungle.net/user/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "authorstream": {
+      "http-version": 1,
+      "url": "http://www.authorstream.com/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "avizo": {
+      "http-version": 1,
+      "url": "https://www.avizo.cz/{}/",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "babyblogru": {
+      "http-version": 1,
+      "url": "https://www.babyblog.ru/user/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "babyru": {
+      "http-version": 1,
+      "url": "https://www.baby.ru/u/{}/",
+      "verify-method": "status",
+      "verify-str": "403",
+      "harvester-tokens": {}
+  },
+  "bandcamp": {
+      "http-version": 1,
+      "url": "https://www.bandcamp.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "behance": {
+      "http-version": 1,
+      "url": "https://www.behance.net/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "bianarysearch": {
+      "http-version": 1,
+      "url": "https://binarysearch.io/@/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "bitbucket": {
+      "http-version": 1,
+      "url": "https://bitbucket.org/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "bitcoinforum": {
+      "http-version": 1,
+      "url": "https://bitcoinforum.com/profile/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "bitwarden forum": {
+      "http-version": 1,
+      "url": "https://community.bitwarden.com/u/{}/summary",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "blip.fm": {
+      "http-version": 1,
+      "url": "https://blip.fm/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "bodybuilding": {
+      "http-version": 1,
+      "url": "https://bodyspace.bodybuilding.com/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "bookcrossing": {
+      "http-version": 1,
+      "url": "https://www.bookcrossing.com/mybookshelf/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "booth": {
+      "http-version": 1,
+      "url": "https://{}.booth.pm/",
+      "verify-method": "url",
+      "verify-str": "https://booth.pm",
+      "harvester-tokens": {}
+  },
+  "buymeacoffee": {
+      "http-version": 1,
+      "url": "https://buymeacoff.ee/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "buzzfeed": {
+      "http-version": 1,
+      "url": "https://buzzfeed.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "capfriendly": {
+      "http-version": 1,
+      "url": "https://www.capfriendly.com/users/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "carbonmade": {
+      "http-version": 1,
+      "url": "https://{}.carbonmade.com",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "career.habr": {
+      "http-version": 1,
+      "url": "https://career.habr.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "championat": {
+      "http-version": 1,
+      "url": "https://www.championat.com/user/{}",
+      "verify-method": "status",
+      "headers": {
+        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "en-US,en;q=0.9",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+      },
+      "harvester-tokens": {}
+  },
+  "chaos.social": {
+      "http-version": 1,
+      "url": "https://chaos.social/@{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "chatujme.cz": {
+      "http-version": 1,
+      "url": "https://profil.chatujme.cz/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "chess": {
+      "http-version": 1,
+      "url": "https://www.chess.com/member/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "cloudflarecommunity": {
+      "http-version": 1,
+      "url": "https://community.cloudflare.com/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "cnet": {
+      "http-version": 1,
+      "url": "https://www.cnet.com/profiles/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "codecademy": {
+      "http-version": 1,
+      "url": "https://www.codecademy.com/profiles/{}",
+      "verify-method": "url",
+      "verify-str": "You+must+be+logged+in+to+access+this+page",
+      "harvester-tokens": {}
+  },
+  "codechef": {
+      "http-version": 1,
+      "url": "https://www.codechef.com/users/{}",
+      "verify-method": "url",
+      "verify-str": "/users/",
+      "harvester-tokens": {}
+  },
+  "codepen": {
+      "http-version": 2,
+      "url": "https://codepen.io/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "codewars": {
+      "http-version": 1,
+      "url": "https://www.codewars.com/users/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "coil": {
+      "http-version": 1,
+      "url": "https://coil.com/u/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "colourlovers": {
+      "http-version": 2,
+      "url": "https://www.colourlovers.com/lover/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "contently": {
+      "http-version": 1,
+      "url": "https://{}.contently.com/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "coroflot": {
+      "http-version": 1,
+      "url": "https://www.coroflot.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "couchsurfing": {
+      "http-version": 1,
+      "url": "https://www.couchsurfing.com/people/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "countable": {
+      "http-version": 1,
+      "url": "https://www.countable.us/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "cracked": {
+      "http-version": 1,
+      "url": "https://www.cracked.com/members/{}/",
+      "verify-method": "url",
+      "verify-str": "/members/",
+      "harvester-tokens": {}
+  },
+  "crevado": {
+      "http-version": 1,
+      "url": "https://{}.crevado.com",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "crowdin": {
+      "http-version": 1,
+      "url": "https://crowdin.com/profile/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "d3ru": {
+      "http-version": 1,
+      "url": "https://d3.ru/user/{}/posts",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "dailykos": {
+      "http-version": 1,
+      "url": "https://www.dailykos.com/user/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "dailymotion": {
+      "http-version": 1,
+      "url": "https://www.dailymotion.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "datingru": {
+      "http-version": 1,
+      "url": "http://dating.ru/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "designspiration": {
+      "http-version": 1,
+      "url": "https://www.designspiration.net/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "dev community": {
+      "http-version": 1,
+      "url": "https://dev.to/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "devientart": {
+      "http-version": 1,
+      "url": "https://{}.deviantart.com",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "devrant": {
+      "http-version": 1,
+      "url": "https://devrant.com/users/{}",
+      "verify-method": "url",
+      "verify-str": "/users/",
+      "harvester-tokens": {}
+  },
+  "discogs": {
+      "http-version": 1,
+      "url": "https://www.discogs.com/user/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "discuss.elastic.co": {
+      "http-version": 1,
+      "url": "https://discuss.elastic.co/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "disqus": {
+      "http-version": 1,
+      "url": "https://disqus.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "dockerhub": {
+      "http-version": 1,
+      "url": "https://hub.docker.com/u/{}/",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "dribble": {
+      "http-version": 1,
+      "url": "https://dribbble.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "drive2": {
+      "http-version": 2,
+      "url": "https://www.drive2.ru/users/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "duolingo": {
+      "http-version": 1,
+      "url": "https://www.duolingo.com/profile/{}",
+      "verify-method": "match",
+      "verify-str": "",
+      "harvester-tokens": {}
+  },
+  "egpu": {
+      "http-version": 1,
+      "url": "https://egpu.io/forums/profile/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "eintracht": {
+      "http-version": 1,
+      "url": "https://community.eintracht.de/fans/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "ello": {
+      "http-version": 1,
+      "url": "https://ello.co/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "etsy": {
+      "http-version": 1,
+      "url": "https://www.etsy.com/shop/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "euw": {
+      "http-version": 1,
+      "url": "https://euw.op.gg/summoner/userName={}",
+      "verify-method": "match",
+      "verify-str": "",
+      "headers": {
+          "Accept":
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "en-US,en;q=0.9",
+          "Sec-Fetch-User": "?1",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+      },
+      "harvester-tokens": {}
+  },
+  "eyeem": {
+      "http-version": 1,
+      "url": "https://www.eyeem.com/u/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "f3.cool": {
+      "http-version": 1,
+      "url": "https://f3.cool/{}/",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "facebook": {
+      "http-version": 1,
+      "url": "https://www.facebook.com/{}",
+      "verify-method": "status",
+      "harvester-tokens": {}
+  },
+  "fandom": {
+  "http-version": 1,
+  "url": "https://www.fandom.com/u/{}",
+  "verify-method": "status",
+  "harvester-tokens": {}
+},
+  "fiverr": {
+    "http-version": 1,
+    "url": "https://www.fiverr.com/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+      "Accept-Encoding": "gzip, deflate, br", 
+      "Accept-Language": "en-US,en;q=0.9", 
+      "Sec-Fetch-User": "?1", 
+      "Upgrade-Insecure-Requests": "1", 
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+  },
+  "harvester-tokens": {}
+},
+  "fixya": {
+    "http-version": 1,
+    "url": "https://www.fixya.com/users/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "fl": {
+    "http-version": 1,
+    "url": "https://www.fl.ru/users/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "flickr": {
+    "http-version": 1,
+    "url": "https://www.flickr.com/people/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "flightradar24": {
+    "http-version": 1,
+    "url": "https://my.flightradar24.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "flipboard": {
+    "http-version": 1,
+    "url": "https://flipboard.com/@{}",
+    "verify-method": "status",
+    "header": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+      "Accept-Encoding": "gzip, deflate, br", 
+      "Accept-Language": "en-US,en;q=0.9", 
+      "Sec-Fetch-User": "?1", 
+      "Upgrade-Insecure-Requests": "1", 
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
+    "harvester-tokens": {}
+  },
+  "fortnitetracker": {
+    "http-version": 1,
+    "url": "https://fortnitetracker.com/profile/all/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "forum_guns": {
+    "http-version": 1,
+    "url": "https://forum.guns.ru/forummisc/blog/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "forumhouseru": {
+    "http-version": 1,
+    "url": "https://www.forumhouse.ru/members/?username={}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "fosstodon": {
+    "http-version": 1,
+    "url": "https://fosstodon.org/@{}",
+    "verify-method": "status",
+    "verify-str": "410",
+    "harvester-tokens": {}
+  },
+  "freelance.habr": {
+    "http-version": 1,
+    "url": "https://freelance.habr.com/freelancers/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "freelancer": {
+    "http-version": 1,
+    "url": "https://www.freelancer.com/u/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "freesound": {
+    "http-version": 1,
+    "url": "https://freesound.org/people/{}/",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gaiaonline": {
+    "http-version": 1,
+    "url": "https://www.gaiaonline.com/profiles/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "gamespot": {
+    "http-version": 1,
+    "url": "https://www.gamespot.com/profile/{}/",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "geocaching": {
+    "http-version": 1,
+    "url": "https://www.geocaching.com/p/default.aspx?u={}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gfycat": {
+    "http-version": 1,
+    "url": "https://gfycat.com/@{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "giphy": {
+    "http-version": 1,
+    "url": "https://giphy.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gitee": {
+    "http-version": 1,
+    "url": "https://gitee.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "github": {
+    "http-version": 1,
+    "url": "https://www.github.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "github support community": {
+    "http-version": 1,
+    "url": "https://github.community/u/{}/summary",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gitlab": {
+    "http-version": 1,
+    "url": "https://gitlab.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "goodreads": {
+    "http-version": 1,
+    "url": "https://www.goodreads.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gradle": {
+    "http-version": 1,
+    "url": "https://plugins.gradle.org/u/{}/summary",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gravatar": {
+    "http-version": 1,
+    "url": "http://en.gravatar.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gumroad": {
+    "http-version": 1,
+    "url": "https://www.gumroad.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gunsandammo": {
+    "http-version": 1,
+    "url": "https://forums.gunsandammo.com/profile/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "gurushots": {
+    "http-version": 1,
+    "url": "https://gurushots.com/{}/photos",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "habr": {
+    "http-version": 1,
+    "url": "https://career.habr.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "hackaday": {
+    "http-version": 1,
+    "url": "https://hackaday.io/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "hackerearth": {
+    "http-version": 1,
+    "url": "https://hackerearth.com/@{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+},
+  "hackernews": {
+    "http-version": 1,
+    "url": "https://news.ycombinator.com/user?id={}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "hackerone": {
+    "http-version": 1,
+    "url": "https://hackerone.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "hackerrank": {
+  "http-version": 1,
+  "url": "https://hackerrank.com/{}",
+  "verify-method": "match",
+  "verify-str": "",
+  "headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+    "Accept-Encoding": "gzip, deflate, br", 
+    "Accept-Language": "en-US,en;q=0.9", 
+    "Sec-Fetch-User": "?1", 
+    "Upgrade-Insecure-Requests": "1", 
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+  },
+  "harvester-tokens": {}
+},
+  "hackster": {
+    "http-version": 1,
+    "url": "https://www.hackster.io/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "hackthebox": {
+    "http-version": 1,
+    "url": "https://forum.hackthebox.eu/profile/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "hexrpg": {
+    "http-version": 1,
+    "url": "https://www.hexrpg.com/userinfo/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "houzz": {
+    "http-version": 1,
+    "url": "https://houzz.com/user/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
 	"hubpages": {
 		"http-version": 1,
 		"url": "https://hubpages.com/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"hubski": {
 		"http-version": 1,
 		"url": "https://hubski.com/user/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"hunting": {
 		"http-version": 1,
 		"url": "https://www.hunting.ru/forum/members/?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"icq": {
-		"http-version": 1,
-		"url": "https://icq.im/{}/en",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -955,48 +818,61 @@
 		"http-version": 1,
 		"url": "https://inkedfur.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
-	"ifttt": {
+  "ifttt": {
 		"http-version": 1,
 		"url": "https://www.ifttt.com/p/{}",
 		"verify-method": "status",
-		"verify-str": "",
+    "headers":{
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		  "Accept-Encoding": "gzip, deflate, br", 
+		  "Accept-Language": "en-US,en;q=0.9", 
+		  "Sec-Fetch-User": "?1", 
+		  "Upgrade-Insecure-Requests": "1", 
+		  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
 		"harvester-tokens": {}
 	},
 	"igromania": {
 		"http-version": 1,
 		"url": "http://forum.igromania.ru/member.php?username={}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"imgsrc.ru": {
 		"http-version": 1,
 		"url": "https://imgsrc.ru/main/user.php?user={}",
-		"verify-method": "status",
-		"verify-str": "",
+		"verify-method": "url",
+		"verify-str": "/main/user",
 		"harvester-tokens": {}
 	},
 	"imgup.cz": {
 		"http-version": 1,
 		"url": "https://imgup.cz/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"imgur": {
 		"http-version": 1,
 		"url": "https://imgur.com/user/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		  "Accept-Encoding": "gzip, deflate, br", 
+		  "Accept-Language": "en-US,en;q=0.9", 
+		  "Sec-Fetch-User": "?1", 
+		  "Upgrade-Insecure-Requests": "1", 
+		  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
 		"harvester-tokens": {}
 	},
 	"instagram": {
 		"http-version": 2,
 		"url": "https://www.instagram.com/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1004,13 +880,12 @@
 		"http-version": 1,
 		"url": "https://www.instructables.com/member/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"interpals": {
 		"http-version": 1,
 		"url": "https://www.interpals.net/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1018,27 +893,24 @@
 		"http-version": 1,
 		"url": "https://irecommend.ru/users/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"issuu": {
 		"http-version": 1,
 		"url": "https://issuu.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"itch.io": {
 		"http-version": 1,
 		"url": "https://{}.itch.io/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"itemfix": {
 		"http-version": 1,
 		"url": "https://www.itemfix.com/c/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1046,104 +918,88 @@
 		"http-version": 1,
 		"url": "https://jbzd.com.pl/uzytkownik/{}",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"jellyfin weblate": {
-		"http-version": 1,
-		"url": "https://translate.jellyfin.org/user/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"jimdo": {
-		"http-version": 1,
-		"url": "https://{}.jimdosite.com",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"juexvideo": {
 		"http-version": 1,
 		"url": "http://www.jeuxvideo.com/profil/{}?mode=infos",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"kaggle": {
 		"http-version": 1,
 		"url": "https://www.kaggle.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"keybase": {
 		"http-version": 1,
 		"url": "https://keybase.io/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"kik": {
 		"http-version": 1,
 		"url": "https://kik.me/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"kofi": {
 		"http-version": 1,
 		"url": "https://ko-fi.com/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		  "Accept-Encoding": "gzip, deflate, br", 
+		  "Accept-Language": "en-US,en;q=0.9", 
+		  "Sec-Fetch-User": "?1", 
+		  "Upgrade-Insecure-Requests": "1", 
+		  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
 		"harvester-tokens": {}
 	},
 	"kongregate": {
 		"http-version": 1,
 		"url": "https://www.kongregate.com/accounts/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"kwork": {
 		"http-version": 1,
 		"url": "https://kwork.ru/user/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"labpentestit": {
 		"http-version": 1,
 		"url": "https://lab.pentestit.ru/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
+		"verify-method": "url",
+		"verify-str": "/profile/",
 		"harvester-tokens": {}
 	},
 	"last.fm": {
 		"http-version": 1,
 		"url": "https://last.fm/user/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"launchpad": {
 		"http-version": 1,
 		"url": "https://launchpad.net/~{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"leasehackr": {
 		"http-version": 1,
 		"url": "https://forum.leasehackr.com/u/{}/summary/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"leetcode": {
 		"http-version": 1,
 		"url": "https://leetcode.com/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1151,48 +1007,42 @@
 		"http-version": 1,
 		"url": "https://letterboxd.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"lichess": {
 		"http-version": 1,
 		"url": "https://lichess.org/@/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"linktree": {
 		"http-version": 1,
 		"url": "https://linktr.ee/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"livejournal": {
 		"http-version": 1,
 		"url": "https://{}.livejournal.com",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"livelib": {
 		"http-version": 1,
 		"url": "https://www.livelib.ru/reader/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"lobsters": {
 		"http-version": 1,
 		"url": "https://lobste.rs/u/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"lolchess": {
 		"http-version": 1,
 		"url": "https://lolchess.gg/profile/na/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1200,69 +1050,69 @@
 		"http-version": 1,
 		"url": "https://www.linux.org.ru/people/{}/profile",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mastodon.cloud": {
 		"http-version": 1,
 		"url": "https://mastodon.cloud/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mastodon.social": {
 		"http-version": 1,
 		"url": "https://mastodon.social/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mastodon.technology": {
 		"http-version": 1,
 		"url": "https://mastodon.technology/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mastodon.xyz": {
 		"http-version": 1,
 		"url": "https://mastodon.xyz/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"medium": {
 		"http-version": 1,
 		"url": "https://medium.com/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"memrise": {
 		"http-version": 1,
 		"url": "https://www.memrise.com/user/{}/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mercadolive": {
 		"http-version": 1,
 		"url": "https://www.mercadolivre.com.br/perfil/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"metacritic": {
 		"http-version": 1,
 		"url": "https://www.metacritic.com/user/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+  		"Accept-Encoding": "gzip, deflate, br", 
+	  	"Accept-Language": "en-US,en;q=0.9", 
+		  "Sec-Fetch-User": "?1", 
+		  "Upgrade-Insecure-Requests": "1", 
+		  "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
 		"harvester-tokens": {}
 	},
 	"mixcloud": {
 		"http-version": 1,
 		"url": "https://www.mixcloud.com/{}/",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1270,14 +1120,12 @@
 		"http-version": 1,
 		"url": "https://moikrug.ru/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"mstdn.io": {
 		"http-version": 1,
 		"url": "https://mstdn.io/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"munzee": {
@@ -1285,61 +1133,51 @@
 		"url": "https://www.munzee.com/m/{}",
 		"verify-method": "status",
 		"verify-str": "",
+    "headers": {
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+  		"Accept-Encoding": "gzip, deflate, br", 
+  		"Accept-Language": "en-US,en;q=0.9", 
+	  	"Sec-Fetch-User": "?1", 
+		  "Upgrade-Insecure-Requests": "1", 
+	  	"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+    },
 		"harvester-tokens": {}
 	},
 	"myanimelist": {
 		"http-version": 1,
 		"url": "https://myanimelist.net/profile/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"myminifactory": {
 		"http-version": 1,
 		"url": "https://www.myminifactory.com/users/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"myspace": {
 		"http-version": 1,
 		"url": "https://myspace.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"nairaland.com": {
 		"http-version": 1,
 		"url": "https://www.nairaland.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"nationstates nation": {
 		"http-version": 1,
 		"url": "https://nationstates.net/nation={}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"nationstates region": {
 		"http-version": 1,
 		"url": "https://nationstates.net/region={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"never": {
-		"http-version": 1,
-		"url": "",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"newgrounds": {
-		"http-version": 1,
-		"url": "https://{}.newgrounds.com",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1347,83 +1185,82 @@
 		"http-version": 1,
 		"url": "https://help.nextcloud.com/u/{}/summary",
 		"verify-method": "status",
-		"verify-str": "",
+		"harvester-tokens": {}
+	},
+  "newgrounds": {
+		"http-version": 1,
+		"url": "https://{}.newgrounds.com",
+		"verify-method": "status",
 		"harvester-tokens": {}
 	},
 	"nicommunity forum": {
 		"http-version": 1,
 		"url": "https://www.native-instruments.com/forum/members?username={}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"nightbot": {
 		"http-version": 1,
 		"url": "https://nightbot.tv/t/{}/commands",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"ninja kiwi": {
 		"http-version": 1,
 		"url": "https://ninjakiwi.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
+		"verify-method": "url",
+		"verify-str": "/profile/",
 		"harvester-tokens": {}
 	},
 	"nnru": {
 		"http-version": 1,
 		"url": "https://{}.www.nn.ru/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"notabug.org": {
 		"http-version": 1,
 		"url": "https://notabug.org/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"note": {
 		"http-version": 1,
 		"url": "https://note.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"npm": {
 		"http-version": 1,
 		"url": "https://www.npmjs.com/~{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"nyaa.si": {
 		"http-version": 1,
 		"url": "https://nyaa.si/user/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"ok": {
 		"http-version": 1,
 		"url": "https://ok.ru/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"onlyfans": {
 		"http-version": 1,
 		"url": "https://onlyfans.com/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"opennet": {
 		"http-version": 1,
 		"url": "https://www.opennet.ru/~{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1431,76 +1268,51 @@
 		"http-version": 1,
 		"url": "https://opensource.com/users/{}",
 		"verify-method": "status",
-		"verify-str": "",
+		"verify-str": "403",
 		"harvester-tokens": {}
 	},
 	"openstreetmap": {
 		"http-version": 1,
 		"url": "https://www.openstreetmap.org/user/{}",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"oracle community": {
-		"http-version": 1,
-		"url": "https://community.oracle.com/people/{}",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"osu!": {
 		"http-version": 1,
 		"url": "https://osu.ppy.sh/users/{}",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"otzovik": {
-		"http-version": 1,
-		"url": "https://otzovik.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"ourdjtalk": {
 		"http-version": 1,
 		"url": "https://ourdjtalk.com/members?username={}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"packagist": {
 		"http-version": 1,
 		"url": "https://packagist.org/packages/{}/",
-		"verify-method": "status",
-		"verify-str": "",
+		"verify-method": "url",
+		"verify-str": "/packages",
 		"harvester-tokens": {}
 	},
 	"pastebin": {
 		"http-version": 1,
 		"url": "https://pastebin.com/u/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"patreon": {
 		"http-version": 1,
 		"url": "https://www.patreon.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"pcgamer": {
 		"http-version": 1,
 		"url": "https://forums.pcgamer.com/members/?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"pcpartpicker": {
-		"http-version": 1,
-		"url": "https://pcpartpicker.com/user/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1508,20 +1320,20 @@
 		"http-version": 1,
 		"url": "https://www.periscope.tv/{}/",
 		"verify-method": "status",
-		"verify-str": "",
+    "headers": {
+		"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		"Accept-Encoding": "gzip, deflate, br", 
+		"Accept-Language": "en-US,en;q=0.9", 
+		"Sec-Fetch-User": "?1", 
+		"Upgrade-Insecure-Requests": "1", 
+		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+},
 		"harvester-tokens": {}
 	},
 	"phpru": {
 		"http-version": 1,
 		"url": "https://php.ru/forum/members/?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"pikabu": {
-		"http-version": 1,
-		"url": "https://pikabu.ru/@{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1529,62 +1341,37 @@
 		"http-version": 1,
 		"url": "https://www.pinkbike.com/u/{}/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"pinterest": {
 		"http-version": 1,
 		"url": "https://www.pinterest.com/{}/",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"pixilart": {
 		"http-version": 1,
 		"url": "https://www.pixilart.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"playstore": {
-		"http-version": 1,
-		"url": "https://play.google.com/store/apps/developer?id={}",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"pokemon showdown": {
 		"http-version": 1,
 		"url": "https://pokemonshowdown.com/users/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"polarsteps": {
 		"http-version": 1,
 		"url": "https://polarsteps.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"polygon": {
-		"http-version": 1,
-		"url": "https://www.polygon.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"pornhub": {
-		"http-version": 1,
-		"url": "https://pornhub.com/users/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"pr0gramm": {
 		"http-version": 1,
 		"url": "https://pr0gramm.com/user/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1592,13 +1379,12 @@
 		"http-version": 1,
 		"url": "https://www.producthunt.com/@{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"prog.hu": {
-		"http-version": 1,
+		"http-version": 2,
 		"url": "https://prog.hu/azonosito/info/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1606,13 +1392,12 @@
 		"http-version": 1,
 		"url": "http://promodj.com/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"psnprofiles.com": {
 		"http-version": 1,
 		"url": "https://psnprofiles.com/{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1620,27 +1405,12 @@
 		"http-version": 1,
 		"url": "https://pypi.org/user/{}",
 		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"quizlet": {
-		"http-version": 1,
+		"http-version": 2,
 		"url": "https://quizlet.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"radio_echo_msk": {
-		"http-version": 1,
-		"url": "https://echo.msk.ru/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"raidforums": {
-		"http-version": 1,
-		"url": "https://raidforums.com/User-{}",
-		"verify-method": "status",
+		"verify-method": "match",
 		"verify-str": "",
 		"harvester-tokens": {}
 	},
@@ -1648,700 +1418,12 @@
 		"http-version": 1,
 		"url": "https://{}.rajce.idnes.cz/",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"rate your music": {
-		"http-version": 1,
-		"url": "https://rateyourmusic.com/~{}",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	},
 	"redbubble": {
 		"http-version": 1,
 		"url": "https://www.redbubble.com/people/{}",
 		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"reddit": {
-		"http-version": 1,
-		"url": "https://www.reddit.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"replit.com": {
-		"http-version": 1,
-		"url": "https://replit.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"researchgate": {
-		"http-version": 1,
-		"url": "https://www.researchgate.net/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"reverbnation": {
-		"http-version": 1,
-		"url": "https://www.reverbnation.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"roblox": {
-		"http-version": 1,
-		"url": "https://www.roblox.com/user.aspx?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"royalcams": {
-		"http-version": 1,
-		"url": "https://royalcams.com/profile/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"rubygems": {
-		"http-version": 1,
-		"url": "https://rubygems.org/profiles/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"runescape": {
-		"http-version": 1,
-		"url": "https://apps.runescape.com/runemetrics/profile/profile?user={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"satsisru": {
-		"http-version": 1,
-		"url": "https://satsis.info/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"snapchat": {
-		"http-version": 1,
-		"url": "https://www.snapchat.com/add/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"sbazar.cz": {
-		"http-version": 1,
-		"url": "https://www.sbazar.cz/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"scratch": {
-		"http-version": 1,
-		"url": "https://scratch.mit.edu/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"scribd": {
-		"http-version": 1,
-		"url": "https://www.scribd.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"shitpostbot5000": {
-		"http-version": 1,
-		"url": "https://www.shitpostbot.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"signal": {
-		"http-version": 1,
-		"url": "https://community.signalusers.org/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"slack": {
-		"http-version": 1,
-		"url": "https://{}.slack.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"slant": {
-		"http-version": 1,
-		"url": "https://www.slant.co/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"slashdot": {
-		"http-version": 1,
-		"url": "https://slashdot.org/~{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"slideshare": {
-		"http-version": 1,
-		"url": "https://slideshare.net/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"smashcast": {
-		"http-version": 1,
-		"url": "https://www.smashcast.tv/api/media/live/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"smule": {
-		"http-version": 1,
-		"url": "https://www.smule.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"social.tchncs.de": {
-		"http-version": 1,
-		"url": "https://social.tchncs.de/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"soundcloud": {
-		"http-version": 1,
-		"url": "https://soundcloud.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"sourceforge": {
-		"http-version": 1,
-		"url": "https://sourceforge.net/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"soylentnews": {
-		"http-version": 1,
-		"url": "https://soylentnews.org/~{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"speedrun.com": {
-		"http-version": 1,
-		"url": "https://speedrun.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"spletnik": {
-		"http-version": 1,
-		"url": "https://spletnik.ru/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"splits.io": {
-		"http-version": 1,
-		"url": "https://splits.io/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"sporcle": {
-		"http-version": 1,
-		"url": "https://www.sporcle.com/user/{}/people",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"sportsru": {
-		"http-version": 1,
-		"url": "https://www.sports.ru/profile/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"spotify": {
-		"http-version": 1,
-		"url": "https://open.spotify.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"star citizen": {
-		"http-version": 1,
-		"url": "https://robertsspaceindustries.com/citizens/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"steam": {
-		"http-version": 1,
-		"url": "https://steamcommunity.com/id/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"steamgroup": {
-		"http-version": 1,
-		"url": "https://steamcommunity.com/groups/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"strava": {
-		"http-version": 1,
-		"url": "https://www.strava.com/athletes/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"sublimeforum": {
-		"http-version": 1,
-		"url": "https://forum.sublimetext.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"svidbook": {
-		"http-version": 1,
-		"url": "https://www.svidbook.ru/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"telegram": {
-		"http-version": 1,
-		"url": "https://t.me/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tellonym.me": {
-		"http-version": 1,
-		"url": "https://tellonym.me/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tenor": {
-		"http-version": 1,
-		"url": "https://tenor.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tetr.io": {
-		"http-version": 1,
-		"url": "https://ch.tetr.io/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tiktok": {
-		"http-version": 1,
-		"url": "https://tiktok.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tinder": {
-		"http-version": 1,
-		"url": "https://www.gotinder.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tldr legal": {
-		"http-version": 1,
-		"url": "https://tldrlegal.com/users/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"toster": {
-		"http-version": 1,
-		"url": "https://www.toster.ru/user/{}/answers",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tradingview": {
-		"http-version": 1,
-		"url": "https://www.tradingview.com/u/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"trakt": {
-		"http-version": 1,
-		"url": "https://www.trakt.tv/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"trashboxru": {
-		"http-version": 1,
-		"url": "https://trashbox.ru/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"trello": {
-		"http-version": 1,
-		"url": "https://trello.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tryhackme": {
-		"http-version": 1,
-		"url": "https://tryhackme.com/p/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"twitch": {
-		"http-version": 1,
-		"url": "https://www.twitch.tv/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"twitter": {
-		"http-version": 1,
-		"url": "https://twitter.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"typeracer": {
-		"http-version": 1,
-		"url": "https://data.typeracer.com/pit/profile?user={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"uid": {
-		"http-version": 1,
-		"url": "http://uid.me/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"ultimate-guitar": {
-		"http-version": 1,
-		"url": "https://ultimate-guitar.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"unsplash": {
-		"http-version": 1,
-		"url": "https://unsplash.com/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"velomania": {
-		"http-version": 1,
-		"url": "https://forum.velomania.ru/member.php?username={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"venmo": {
-		"http-version": 1,
-		"url": "https://venmo.com/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"vero": {
-		"http-version": 1,
-		"url": "https://vero.co/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"vimeo": {
-		"http-version": 1,
-		"url": "https://vimeo.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"virgool": {
-		"http-version": 1,
-		"url": "https://virgool.io/@{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"virustotal": {
-		"http-version": 1,
-		"url": "https://www.virustotal.com/ui/users/{}/trusted_users",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"vk": {
-		"http-version": 1,
-		"url": "https://vk.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"vsco": {
-		"http-version": 1,
-		"url": "https://vsco.co/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"warrior forum": {
-		"http-version": 1,
-		"url": "https://www.warriorforum.com/members/{}.html",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wattpad": {
-		"http-version": 1,
-		"url": "https://www.wattpad.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"we heart it": {
-		"http-version": 1,
-		"url": "https://weheartit.com/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"weblate": {
-		"http-version": 1,
-		"url": "https://hosted.weblate.org/user/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"webnode": {
-		"http-version": 1,
-		"url": "https://{}.webnode.cz/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"whonix forum": {
-		"http-version": 1,
-		"url": "https://forums.whonix.org/u/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wicg forum": {
-		"http-version": 1,
-		"url": "https://discourse.wicg.io/u/{}/summary",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wiki.vg": {
-		"http-version": 1,
-		"url": "https://wiki.vg/User:{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wikidot": {
-		"http-version": 1,
-		"url": "http://www.wikidot.com/user:info/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wikipedia": {
-		"http-version": 1,
-		"url": "https://en.wikipedia.org/wiki/Special:CentralAuth/{}?uselang=qqx",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"windy": {
-		"http-version": 1,
-		"url": "https://community.windy.com/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wix": {
-		"http-version": 1,
-		"url": "https://{}.wix.com",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wordnik": {
-		"http-version": 1,
-		"url": "https://www.wordnik.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wordpress": {
-		"http-version": 1,
-		"url": "https://{}.wordpress.com/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"wordpressorg": {
-		"http-version": 1,
-		"url": "https://profiles.wordpress.org/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"xboxgamertag": {
-		"http-version": 1,
-		"url": "https://xboxgamertag.com/search/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"xhamster": {
-		"http-version": 1,
-		"url": "https://xhamster.com/users/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"xvideos": {
-		"http-version": 1,
-		"url": "https://xvideos.com/profiles/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"younow": {
-		"http-version": 1,
-		"url": "https://www.younow.com/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"youpic": {
-		"http-version": 1,
-		"url": "https://youpic.com/photographer/{}/",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"youporn": {
-		"http-version": 1,
-		"url": "https://youporn.com/uservids/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"youtube - official": {
-		"http-version": 1,
-		"url": "https://www.youtube.com/c/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"zhihu": {
-		"http-version": 1,
-		"url": "https://www.zhihu.com/people/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"zoomit": {
-		"http-version": 1,
-		"url": "https://www.zoomit.ir/user/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"namemc": {
-		"http-version": 1,
-		"url": "https://namemc.com/search?q={}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"Cod Warzone": {
-		"http-version": 1,
-		"url": "https://cod.tracker.gg/warzone/profile/atvi/{}/overview",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tracker.gg valorant": {
-		"http-version": 1,
-		"url": "https://tracker.gg/valorant/profile/riot/{}%231of1/overview",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"r6.tracker.network : playstation": {
-		"http-version": 1,
-		"url": "https://r6.tracker.network/profile/psn/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"r6.tracker.network : pc": {
-		"http-version": 1,
-		"url": "https://r6.tracker.network/profile/pc/{}",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"rocketleage.tracker": {
-		"http-version": 1,
-		"url": "https://rocketleague.tracker.network/rocket-league/profile/epic/{}/overview",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"halotracker.com": {
-		"http-version": 1,
-		"url": "https://halotracker.com/halo-infinite/profile/xbl/{}/overview?experience=ranked&playlist=f7eb8c71-fedb-4696-8c0f-96025e285ffd",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tracker.gg LoL [NA]": {
-		"http-version": 1,
-		"url": "https://tracker.gg/lol/profile/riot/NA/{}/overview",
-		"verify-method": "status",
-		"verify-str": "",
-		"harvester-tokens": {}
-	},
-	"tracker.gg LoL [SA]": {
-		"http-version": 1,
-		"url": "https://tracker.gg/lol/profile/riot/LAN/{}/overview",
-		"verify-method": "status",
-		"verify-str": "",
 		"harvester-tokens": {}
 	}
 }
