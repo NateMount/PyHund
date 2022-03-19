@@ -78,6 +78,9 @@ def scan_clients() -> None:
 	for target in targets:
 		print(C5+target+'\033[0;0;0m')
 		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
+			if not site:
+				continue
+
 			Log(site)
 			site_data:dict = get_site(site)
 			if site_data['http-version'] == 1:
@@ -89,6 +92,7 @@ def scan_clients() -> None:
 				continue
 
 			display_response(target, site, data, verify(site, data))
+		print('')
 
 
 def display_response(target:str, site:str, data, is_valid:bool) -> None:
