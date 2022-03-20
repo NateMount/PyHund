@@ -19,7 +19,7 @@ def verify(site_name:str, site) -> bool:
 				return site.status_code == 200
 
 		case 'url':
-			return site_data['valid-str'] in site.url
+			return site_data['verify-str'] in site.url
 
 		case 'match':
 			return re.search(site_data['verify-method'], site.text) != None
