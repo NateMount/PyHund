@@ -2,6 +2,9 @@
 
 import os, sys
 
+_sites:set = {}
+_scan_dir:str = ''
+
 def interactive() -> None:
 
 	sites:set[str] = {}
@@ -26,12 +29,20 @@ def interactive() -> None:
 				else:
 					pass
 
-def genscan() -> None:
-	pass
+def genscan(*args) -> None:
+	"""Used to make scan from passed in arguemnts"""
+	sites:set = set([ arg for arg in args if arg in _sites ])
+	if '-u' in args:
+		for scan in args[args.index('-u'):]
+			try:
+				for site in open(_scan_dir+'/'+scan, 'r').read().split('\n'):
+					
+	
+
 
 def display_help() -> None:
 	"""Used to display help message to terminal"""
-	print('makescan - help')
+	print('makescan - help\n\nUsage:\n\tmakescan site1 site2 ... siteN -u scan1 scan2 ... scanN\n\tmakesite -I')
 
 if __name_ == '__main__':
 	if '-I' in sys.argv:
