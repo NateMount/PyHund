@@ -907,6 +907,12 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
+  "jellyfin weblate": {
+    "http-version": 1,
+    "url": "https://translate.jellyfin.org/user/{}/",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
   "juexvideo": {
     "http-version": 1,
     "url": "http://www.jeuxvideo.com/profil/{}?mode=infos",
@@ -1300,6 +1306,18 @@
     "url": "https://forums.pcgamer.com/members/?username={}",
     "verify-method": "match",
     "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "pikabu": {
+    "http-version": 2,
+    "url": "https://pikabu.ru/@{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "pcpartpicker": {
+    "http-version": 2,
+    "url": "https://pcpartpicker.com/user/{}",
+    "verify-method": "status",
     "harvester-tokens": {}
   },
   "periscope": {
