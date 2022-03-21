@@ -392,12 +392,6 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
-  "designspiration": {
-    "http-version": 1,
-    "url": "https://www.designspiration.net/{}/",
-    "verify-method": "status",
-    "harvester-tokens": {}
-  },
   "dev community": {
     "http-version": 1,
     "url": "https://dev.to/{}",
@@ -1125,7 +1119,6 @@
     "http-version": 1,
     "url": "https://www.munzee.com/m/{}",
     "verify-method": "status",
-    "verify-str": "",
     "headers": {
       "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
       "Accept-Encoding": "gzip, deflate, br",
@@ -1359,6 +1352,12 @@
     "url": "https://polarsteps.com/{}",
     "verify-method": "match",
     "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "polygon": {
+    "http-version": 1,
+    "url": "https://www.polygon.com/users/{}",
+    "verify-method": "status",
     "harvester-tokens": {}
   },
   "pr0gramm": {
