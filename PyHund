@@ -20,6 +20,7 @@ targets:list[str] = []
 rules:list[str] = []
 scan_data:list[str] = []
 h_rules:list[str] = []
+filters:dict = {'http-ver':None, 'verify-method':None}
 
 def title() -> None:
 	"""Prints out Ascii Art title"""
@@ -43,12 +44,26 @@ def check_args() -> None:
 	global rules
 	global harvest
 	global h_rules
+	global filters
 	
 	for t in sys.argv[sys.argv.index('-t') + 1:]:
 		if t.startswith('-'):
 			break
 		targets.append(t)
 	Log(targets)
+
+	if '-f' in sys.argv:
+		for _filter in sys.argv[sys.argv.index('-f')+1:]:
+			Log(_filter)
+			if _filter.startswith('-'):
+				break
+
+			if _filter.startswith('http-ver'):
+				Log('HTTPVER - DETECTED')
+				filters['http-ver'] = int(_filter.split('=')[-1])
+			elif _filter.startswith('verify-method'):
+				Log('VERIFYMETHOD - DETECTED')
+				filters['verify-method'] = _filter.split('=')[-1].split(',')
 
 	if '-S' in sys.argv:
 		for s in sys.argv[sys.argv.index('-S') + 1:]:
@@ -63,7 +78,7 @@ def check_args() -> None:
 			print(f'{C1}Scan not recognised!\033[0;0m')
 			sys.exit()		
 
-	Log(scan_data)
+	Log(len(scan_data))
 
 	rules = [ r for r in sys.argv if r.startswith('--') ]
 	Log(rules)
@@ -77,12 +92,25 @@ def scan_clients() -> None:
 
 	for target in targets:
 		print(C5+target+'\033[0;0;0m')
-		for site in scan_data:	#TODO ERROR only works becaus last newline error never raised or printed
+		for site in scan_data:
 			if not site:
 				continue
 
 			Log(site)
 			site_data:dict = get_site(site)
+
+			if not site_data:
+				continue
+
+			Log(filters)
+
+			if filters['http-ver']:
+				if site_data['http-version'] != filters['http-ver']:
+					continue
+			if filters['verify-method']:
+				if site_data['verify-method'] not in filters['verify-method']:
+					continue
+
 			if site_data['http-version'] == 1:
 				data = get(site, target)
 			elif site_data['http-version'] == 2:
@@ -109,7 +137,10 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 
 def main() -> None:
 	check_args()
-	scan_clients()
+	try:
+		scan_clients()
+	except KeyboardInterrupt:
+		print(f"\r{C1}Terminated\033[0m")
 
 if __name__ == '__main__':
 	Log(f"Debug [{C5}ON\033[0;0m]")
