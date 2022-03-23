@@ -10,7 +10,7 @@
     "http-version": 1,
     "url": "http://forum.3dnews.ru/member.php?username={}",
     "verify-method": "match",
-    "verify-str": "",
+    "verify-str": "<title>Форум 3DNews - Просмотр профиля:",
     "harvester-tokens": {}
   },
   "7cups": {
