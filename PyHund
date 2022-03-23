@@ -46,10 +46,10 @@ def check_args() -> None:
 	global h_rules
 	global filters
 	
-	for t in sys.argv[sys.argv.index('-t') + 1:]:
-		if t.startswith('-'):
+	for _t in sys.argv[sys.argv.index('-t') + 1:]:
+		if _t.startswith('-'):
 			break
-		targets.append(t)
+		targets.append(_t)
 	Log(targets)
 
 	if '-f' in sys.argv:
@@ -66,12 +66,12 @@ def check_args() -> None:
 				filters['verify-method'] = _filter.split('=')[-1].split(',')
 
 	if '-S' in sys.argv:
-		for s in sys.argv[sys.argv.index('-S') + 1:]:
-			if s.startswith('-'):
+		for _s in sys.argv[sys.argv.index('-S') + 1:]:
+			if _s.startswith('-'):
 				break
-			scan_data.append(s.lower())
+			scan_data.append(_s.lower())
 	else:
-		scan:str = sys.argv[sys.argv.index('-s') + 1]
+		scan = sys.argv[sys.argv.index('-s') + 1]
 		try:
 			scan_data = open('lib/scans/'+scan, 'r').read().split('\n')
 		except FileNotFoundError:
@@ -80,11 +80,11 @@ def check_args() -> None:
 
 	Log(len(scan_data))
 
-	rules = [ r for r in sys.argv if r.startswith('--') ]
+	rules = [ _r for _r in sys.argv if _r.startswith('--') ]
 	Log(rules)
 	if '--harvest' in rules:
 		harvest = True
-		h_rules = [hr for hr in sys.argv if hr.startswith('%') ]
+		h_rules = [_hr for _hr in sys.argv if _hr.startswith('%') ]
 	Log(h_rules)
 
 def scan_clients() -> None:
@@ -136,7 +136,10 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 		print(f"\t{C3}{site}{C4} {data.url} \033[0;0;0m")
 
 def main() -> None:
-	check_args()
+	try:
+		check_args()
+	except IndexError:
+		sys.exit()
 	try:
 		scan_clients()
 	except KeyboardInterrupt:
