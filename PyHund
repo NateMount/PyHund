@@ -30,7 +30,7 @@ def title() -> None:
 def display_help() -> None:
 	"""Displays Pyhund's help"""
 	title()
-	print(f"\n{C2}[{C5}PyHund Help{C2}]\n\n{C5}Usage\033[0;0m\n\n\t{C2}PyHund {C4}-t {C2}targets {C4}-s {C2}scantype {C4}--rule {C2}... {C4}--harvest {C3}%harvester-opt ...\033[0;0m\n\n{C5}Required Args\033[0;0m\n  {C4}-t\t\t\033[0;0m[{C5}Target(s)\033[0;0m] {C2}Sets the target or targets to search for\033[0;0m\n  {C4}-s\t\t\033[0;0m[{C5}Scantype\033[0;0m] {C2}Sets the scantype to be used for scan\033[0;0m\n  {C4}-f\t\t\033[0;0m[{C5}Flag(s)\033[0;0m] {C2}Sets flags for filtering output\033[0;0m\n\n{C5}Rules\033[0;0m\n  {C4}--no-url\t\033[0;0m[{C5}No Url\033[0;0m] {C2}Will not display the url of the site when found\033[0;0m\n  {C4}--no-err\t\033[0;0m[{C5}No Error\033[0;0m] {C2}Will not show bad responses\033[0;0m\n  {C4}--log\t\t\033[0;0m[{C5}Logging\033[0;0m] {C2}Logs output to file\033[0;0m\n\n{C5}Harvester\033[0;0m\n\n  {C1}If enabled will scrape important data from site pertaining to target\033[0;0m\n\n  {C4}%{C5}html{C2} Formats harvested data for html document\033[0;0m\n  {C4}%{C5}raw{C2} Provides no formatting but re-routes output to txt file\033[0;0m\n  {C4}%{C5}json{C2} formats output to a json format\033[0;0m\n")
+	print(f"\n{C2}[{C5}PyHund Help{C2}]\n\n{C5}Usage\033[0;0m\n\n\t{C2}PyHund {C4}-t {C2}targets {C4}-s {C2}scantype {C4}--rule {C2}... {C4}--harvest {C3}%harvester-opt ...\033[0;0m\n\n{C5}Required Args\033[0;0m\n  {C4}-t\t\t\033[0;0m[{C5}Target(s)\033[0;0m] {C2}Sets the target or targets to search for\033[0;0m\n  {C4}-s\t\t\033[0;0m[{C5}Scantype\033[0;0m] {C2}Sets the scantype to be used for scan\033[0;0m\n  {C4}-f\t\t\033[0;0m[{C5}Flag(s)\033[0;0m] {C2}Sets flags for filtering output [http-ver / validation-method]\033[0;0m\n\n{C5}Rules\033[0;0m\n  {C4}--no-url\t\033[0;0m[{C5}No Url\033[0;0m] {C2}Will not display the url of the site when found\033[0;0m\n  {C4}--no-err\t\033[0;0m[{C5}No Error\033[0;0m] {C2}Will not show bad responses\033[0;0m\n  {C4}--log\t\t\033[0;0m[{C5}Logging\033[0;0m] {C2}Logs output to file\033[0;0m\n\n{C5}Harvester\033[0;0m\n\n  {C1}If enabled will scrape important data from site pertaining to target\033[0;0m\n\n  {C4}%{C5}html{C2} Formats harvested data for html document\033[0;0m\n  {C4}%{C5}raw{C2} Provides no formatting but re-routes output to txt file\033[0;0m\n  {C4}%{C5}json{C2} formats output to a json format\033[0;0m\n")
 
 def check_args() -> None:
 	"""Checks arguments and sets pertinent data"""
@@ -131,9 +131,9 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	elif not is_valid:
 		pass
 	elif is_valid and '--no-url' in rules:
-		print(f"{C5}{target}{C3} {site} \033[0;0;0m")
+		print(f"\t{C3} {site} \033[0;0;0m")
 	else:
-		print(f"{C5}{target}:{C3}{site}{C4} {data.url} \033[0;0;0m")
+		print(f"\t{C3}{site}{C4} {data.url} \033[0;0;0m")
 
 def main() -> None:
 	check_args()
