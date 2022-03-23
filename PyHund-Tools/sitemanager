@@ -1,0 +1,39 @@
+#! /usr/bin/env python3.10
+
+import sys
+import json
+
+SITE_INDEX:dict = json.load(open('./lib/manifest.json', 'r'))
+
+def display_site(name):
+	try:
+		_sd = SITE_INDEX[name.strip()]
+		print(f"[{name}]")
+		[print(f"\t[{k}]: {_sd[k]}") for k in _sd]
+	except KeyError:
+		print(f"{name} does not exist!")
+
+def interactive():
+
+	while True:
+		_cmd = input('\033[1;30m\033[48;2;202;254;1m << \033[0m ')
+		if _cmd == 'quit':
+			break
+
+		if _cmd == 'help':
+			print('? - ? args - shows if sites exist\nshow - show args - displays site for each site in args')
+
+		match _cmd.split()[0]:
+			case '?':
+				[ print(f"\t{s} Exists in Sites") for s in _cmd.split()[1:] if s in SITE_INDEX ]
+			case 'show':
+				[ display_site(s) for s in _cmd.split()[1:] ]
+
+def main():
+	if '-i' in sys.argv:
+		interactive()
+	else:
+		display_site(sys.argv[-1])
+
+if __name__ == '__main__':
+	main()
