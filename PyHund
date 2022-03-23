@@ -4,7 +4,6 @@ import os, sys
 from src.util import Log
 from src.webscraper import get, get_hyper, get_site
 from src.validator import verify
-from src.updater import update
 #from src.harvester import harvest
 
 #const colors
