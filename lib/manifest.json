@@ -43,6 +43,20 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
+  "athlinks":{
+    "http-version": 1,
+    "url": "https://blog.athlinks.com/author/{}/",
+    "verify-method": "status",
+    "headers": {
+		"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		"Accept-Encoding": "gzip, deflate, br", 
+		"Accept-Language": "en-US,en;q=0.9", 
+		"Sec-Fetch-User": "?1", 
+		"Upgrade-Insecure-Requests": "1", 
+		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+},
+    "harvester-tokens": {}
+  },
   "akniga": {
     "http-version": 1,
     "url": "https://akniga.org/profile/{}",
@@ -157,6 +171,12 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
+  "bebee": {
+    "http-version": 1,
+    "url": "https://br.bebee.com/bee/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
   "behance": {
     "http-version": 1,
     "url": "https://www.behance.net/{}",
@@ -219,6 +239,13 @@
     "http-version": 1,
     "url": "https://buzzfeed.com/{}",
     "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "Caffine": {
+    "http-version": 1,
+    "url": "https://www.caffeine.tv/{}",
+    "verify-method": "match",
+    "verify-str": "",
     "harvester-tokens": {}
   },
   "capfriendly": {
@@ -449,11 +476,24 @@
     "verify-str": "",
     "harvester-tokens": {}
   },
+  "dlive": {
+    "http-version": 1,
+    "url": "https://dlive.tv/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
   "duolingo": {
     "http-version": 1,
     "url": "https://www.duolingo.com/profile/{}",
     "verify-method": "match",
     "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "elpha": {
+    "http-version": 1,
+    "url": "https://elpha.com/members/{}?tab=about",
+    "verify-method": "status",
     "harvester-tokens": {}
   },
   "egpu": {
@@ -801,6 +841,19 @@
     "verify-str": "",
     "harvester-tokens": {}
   },
+  "icave": {
+    "http-version": 1,
+    "url": "https://odysee.com/@{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "influenster": {
+    "http-version": 1,
+    "url": "https://www.influenster.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
   "inkedfur": {
     "http-version": 1,
     "url": "https://inkedfur.com/{}",
@@ -1011,6 +1064,12 @@
   "linktree": {
     "http-version": 1,
     "url": "https://linktr.ee/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "likee": {
+    "http-version": 1,
+    "url": "https://likee.video/@{}?lang=en",
     "verify-method": "status",
     "harvester-tokens": {}
   },
@@ -1627,6 +1686,12 @@
     "verify-str": "",
     "harvester-tokens": {}
   },
+  "steemit": {
+    "http-version": 1,
+    "url": "https://steemit.com/@{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
   "strava": {
     "http-version": 1,
     "url": "https://www.strava.com/athletes/{}",
@@ -1699,6 +1764,20 @@
     "http-version": 1,
     "url": "https://tldrlegal.com/users/{}/",
     "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "Trovo": {
+    "http-version":1,
+    "url": "https://trovo.live/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "Triller": {
+    "http-version": 1,
+    "url": "https://triller.co/@{}",
+    "verify-method": "match",
+    "verify-str": "",
     "harvester-tokens": {}
   },
   "tradingview": {
@@ -1927,6 +2006,12 @@
   "r6.tracker.network : playstation": {
     "http-version": 1,
     "url": "https://r6.tracker.network/profile/psn/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "r6.tracker.network : pc": {
+    "http-version": 1,
+    "url": "https://r6.tracker.network/profile/pc/{}",
     "verify-method": "status",
     "harvester-tokens": {}
   },
