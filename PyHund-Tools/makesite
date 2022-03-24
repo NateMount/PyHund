@@ -84,17 +84,19 @@ def check_http_version(site) -> int:
 
 def check_validation_method(site_data:dict) -> str:
 	"""Will try to detect an accurate validation method for site"""
-	
-	if site_data['GOOD'][':s'] != site_data['BAD'][':s']:
-		Log('status validation detected')
-		return 'status'
+	if site_data['GOOD'][':s'] == site_data['GOOD']['hs']:
+		if site_data['GOOD'][':s'] != site_data['BAD'][':s']:
+			Log('status validation detected')
+			return 'status'
 
-	elif site_data['GOOD'][':u'] != site_data['BAD'][':u']:
-		Log('url validation detected')
-		return 'url'
+		elif site_data['GOOD'][':u'] != site_data['BAD'][':u']:
+			Log('url validation detected')
+			return 'url'
 
-	Log('match fallback used')
-	return 'match'
+		Log('match fallback used')
+		return 'match'
+	else:
+
 
 def check_validation_str(site) -> str:
 	"""Will try to detect a validation string for potential use"""
@@ -110,6 +112,10 @@ def main():
 		sys.exit()
 
 	Log('[ON]')
-
+	#GET SITE DIFF
+	#CHECK HTTP VER
+	#CHECK VALIDATION METHID
+	#CHECK VALIDATION STR
+	#ATTEMPT HARVESTER	
 	
 
