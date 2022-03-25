@@ -1851,13 +1851,6 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
-  "velomania": {
-    "http-version": 1,
-    "url": "https://forum.velomania.ru/member.php?username={}",
-    "verify-method": "match",
-    "verify-str": "",
-    "harvester-tokens": {}
-  },
   "venmo": {
     "http-version": 1,
     "url": "https://venmo.com/u/{}",
