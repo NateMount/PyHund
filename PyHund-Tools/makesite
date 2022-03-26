@@ -1,121 +1,167 @@
 #! /usr/bin/env python3
+#File : makesite [PyHund tool]
+#Desc : Tool used to create a site to be used by pyhund from a given url
+#Author : NateMount
 
 import os, sys
 import re
-
 import requests as r
 import socket as sk
+import json
 
-UNKNOWN_USR:str = 'N01w0Od3vErU$eth1ss01001010'
-HEADERS:dict = {
-	
+#Global Variables
+_BN:str = 'N01W0odEv3rrU$eeD1ss01'
+_GN:str = 'john'
+_H = {
+  		"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", 
+		"Accept-Encoding": "gzip, deflate, br", 
+		"Accept-Language": "en-US,en;q=0.9", 
+		"Sec-Fetch-User": "?1", 
+		"Upgrade-Insecure-Requests": "1", 
+		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
 }
-
-#------ Function Body ------#
-
-def Log(*args, **kwargs) -> None:
-	"""Used to log debug statements to stdout"""
-	if '--debug' in sys.argv:
-		print('DEBUG::',*args,**kwargs)
+_O = 'out.json'
 
 
-def display(*args, **kwargs):
-	"""Used to put strings to stdout"""
-	if '--no-print' not in sys.argv:
-		print(*args, **kwargs)
+def _help() -> None:
+  """Prints help text to screen"""
+  print("\033[0mmakesite [\033[38;2;201;254;1mhelp\033[0m]\n\nUsage:\t\033[38;2;201;254;1mmakesite\033[0m url -arg[opts] --flag\n\nArguments\n\t-u\t\033[38;2;201;254;1mSet User\033[0m\tUsed to set the good user (user that exists on site)\n\t-v\t\033[38;2;201;254;1mSet Version\033[0m\tUsed to set the http-version of site [\033[38;2;255;0;35mWarning\033[0m Use only if you know the http-version]\n\t-o\t\033[38;2;201;254;1mSet stdout\033[0m\tUsed to set name of file to write json data to [default=out.json]\n")
 
 
-def display_help():
-	"""Used to show help for tool"""
-	print("""
-makesite help
+def _get_site_diff(url:str) -> dict:
+  """Used to get differential between site with [good/bad] names and [no/all] headers"""
+  _sd = {'G':{}, 'B':{}}
 
-usage::	makesite url [-args [opts]] [--rules]
-
-url::
-	must be in format of `http(s)://sitename.ext/{}`
-	example - https://myspace.com/{}
-	NOTE - {} demark where the username will be replaced
-
-args::
-	-h	displays help page (this)
-	-n	gives a known name to check for on site to make validation [Default=john]
-	-s	gives a site name to be linked to url [Default=Content between https:// and .]
-	-v	gives http-version !!!Only Use if you Know the Version!!! [Default=1]
-	-u	gives the file to append site to after checking
-	-o	gives file to write to after checking site
-
-rules::
-	--no-print	disables print functions for tool
-	--no-ping	disables initial ping to site
-	--no-ver-scan	disables http-version detection
-	--debug		sets tool to debug mode
-""")
-
-def get_site_differential(url:str, good_name:str) -> dict:
-	"""Will check both good and bad name for site and find differenced inbetween"""
-	diff:dict = {
-		"GOOD":{}
-		"BAD":{}
-	}
-
-	try:
-		good_headless = r.get(url.format(good_name))
-		good = r.get(url.format(good_name), headers=HEADERS)
-	
-		bad_headless = r.get(url.format(UNKNOWN_USR))
-		bad = r.get(url.format(UNKNOWN_USR), headers=HEADERS)
-	
-		diff['GOOD'] = {':u':good_headless.url, ':s':good_headless.status_code, ':hu':good.url, ':hs': good.status_code}
-		diff['BAD'] = {':u':bad_headless.url, ':s':bad_headless.status_code, ':hu':bad.url, ':hs': bad.status_code}
-
-	except r.exceptions.ConnectionError:
-		display('Site could not be located')
-
-	return diff
-
-def check_http_version(site) -> int:
-	"""Will try to detect the http-version required to access site"""
-	if '--no-ver-scan' in sys.argv:
-		Log('http-version detection disabled')
-		return 1
-	else:
-		return 2 if (site['GOOD'][':s'] == site['GOOD'][':hs'] and site['BAD'][':s'] == site['BAD'][':hs'] and site['BAD'][':s'] == site['GOOD'][':s'] and site['GOOD'][':s'] in ('404','403')) else 1
-
-def check_validation_method(site_data:dict) -> str:
-	"""Will try to detect an accurate validation method for site"""
-	if site_data['GOOD'][':s'] == site_data['GOOD']['hs']:
-		if site_data['GOOD'][':s'] != site_data['BAD'][':s']:
-			Log('status validation detected')
-			return 'status'
-
-		elif site_data['GOOD'][':u'] != site_data['BAD'][':u']:
-			Log('url validation detected')
-			return 'url'
-
-		Log('match fallback used')
-		return 'match'
-	else:
+  try:
+    #Retrieving data from site
+    _gr = r.get(url.format(_GN))
+    _gr_h = r.get(url.format(_GN), headers=_H)
+    _br = r.get(url.format(_BN))
+    _br_h = r.get(url.format(_BN), headers=_H)
+  except r.ConnectionError:
+    print("Connection refused")
+    sys.exit()
 
 
-def check_validation_str(site) -> str:
-	"""Will try to detect a validation string for potential use"""
-	#IF STATUS : IF STATUS != 200 return GOOD STATUS
-	#ELSE IF URL : FIND DIFF IN URL
-	#ELSE : TRY FIND DIFF IN EITHER [TITLE / OG: / DIV]
-	return ''
+  #Setting good response map
+  _sd['G'] = {
+    ':s':_gr.status_code, ':u':_gr.url, ':c':_gr.text,
+    ':s_h':_gr_h.status_code, ':u_h':_gr_h.url, ':c_h':_gr_h.text
+             }
 
-def main():
-	
-	if '-h' in sys.argv or len(args) == 0:
-		display_help()
-		sys.exit()
+  #Setting bad respose map
+  _sd['B'] = {
+    ':s':_br.status_code, ':u':_br.url, ':c':_br.text,
+    ':s_h':_br_h.status_code, ':u_h':_br_h.url, ':c_h':_br_h.text
+             }
+  
+  return _sd
 
-	Log('[ON]')
-	#GET SITE DIFF
-	#CHECK HTTP VER
-	#CHECK VALIDATION METHID
-	#CHECK VALIDATION STR
-	#ATTEMPT HARVESTER	
-	
 
+def _get_http_ver(site_diff:dict) -> int:
+  """Will attempt http-version detection on site"""
+  if site_diff['G'][':s'] == site_diff['G'][':s_h'] == site_diff['B'][':s'] == site_diff['B'][':s_h']:
+    if site_diff['G'][':s'] in (403, 402, 400):
+      return 2
+    else: 
+      return 1
+  else:
+    return 1
+
+
+def _needs_headers(site_diff:dict) -> bool:
+  """Will check retrieved data to see if headers are required to make accurate scan"""
+
+  if site_diff['G'][':s'] != site_diff['G'][':s_h']:
+    if site_diff['G'][':s_h'] in (200, 403) and site_diff['G'][':s'] != 200:
+      return True
+
+  return False
+    
+
+def _get_verify_method(site_diff:dict) -> str:
+  """Will detect a method to validate if site is good response"""
+
+  if _needs_headers(site_diff):
+    if site_diff['G'][':s_h'] != site_diff['B'][':s_h'] and site_diff['G'][':s_h'] in (200, 403):
+      return 'status'
+    elif site_diff['G'][':u_h'] != site_diff['B'][':u_h']:
+      return 'url'
+
+  else:
+    if site_diff['G'][':s'] != site_diff['B'][':s'] and site_diff['G'][':s'] in (200,403):
+      return 'status'
+    elif site_diff['G'][':u'] != site_diff['B'][':u']:
+      return 'url'
+
+  return 'match'
+
+def _get_validation_str(site_data:dict, method:str) -> str:
+  """Will find a unique string to check authenticity of response"""
+  if _needs_headers(site_data):
+    if method == 'status':
+      if site_data['G'][':s_h'] == 200:
+        return None
+      else:
+        return "403"
+    if method == 'url':
+      for _tokenA, _tokenB in zip(site_data['G'][':u_h'].split('/'), site_data['B'][':u_h'].split('/')):
+        if _tokenA != _tokenB:
+          return '/'+_tokenA
+    if method == 'match':
+      return ""
+  else:
+    if method == 'status':
+      if site_data['G'][':s'] == 200:
+        return None
+      else:
+        return "403"
+    if method == 'url':
+      for _tokenA, _tokenB in zip(site_data['G'][':u'].split('/'), site_data['B'][':u'].split('/')):
+        if _tokenA != _tokenB:
+          return '/'+_tokenA
+    if method == 'match':
+      return ""
+    
+def main() -> None:
+  """Main"""
+  if len(sys.argv) == 1 or '--help' in sys.argv:
+    _help()
+    sys.exit()
+
+  #Updating user off args
+  if '-u' in sys.argv:
+    _GN = sys.argv[sys.argv.index('-u')+1]
+
+  if '-o' in sys.argv:
+    _O = sys.argv[sys.argv.index('-o')+1]
+
+  #If pings are not disabled check to resolve hostname to see if site live
+
+  _sout = {}
+
+  #Retrieving site differential
+  _sd = _get_site_diff(sys.argv[1])
+
+  #Finding http-version
+  if '-v' in sys.argv:
+    _sout['http-version'] = (int(sys.argv[sys.argv.index('-v')+1])%2)+1
+  else:
+    _sout['http-version'] = _get_http_ver(_sd)
+
+  _verify_method = _get_verify_method(_sd)
+  _valid_str = _get_validation_str(_sd, _verify_method)
+
+
+  _sout['url'] = sys.argv[1]
+  _sout['verify-method'] = _verify_method
+  if _valid_str:
+    _sout['valid-str'] = _valid_str
+  if _needs_headers(_sd):
+    _sout['headers'] = _H
+  _sout['harvester-tokens'] = {}
+
+  json.dump(_sout, open(_O, 'w'))
+
+if __name__ == '__main__':
+  main()
