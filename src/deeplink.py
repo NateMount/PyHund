@@ -10,15 +10,13 @@ class DeepLinkControler:
 
 	def __init__(self, *args):
 		self.args:list = args
-
 		self.target:dict = None
 
 	def set_target(self, target:str, **kwargs) -> None:
 		"""Sets active tracking target"""
 		self.target = make_dl_target(target, **kwargs)
 
-	@staticmethod
-	def _load_dl_profiles(path:str):
+	def _load_dl_profiles(self, path:str):
 		"""Internal Use Only : Loads DeepLink profiles data"""	
 		profiles:dict = {}
 
