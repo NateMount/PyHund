@@ -6,14 +6,6 @@ from src.webscraper import get, get_hyper, get_site
 from src.validator import verify
 #from src.harvester import harvest
 
-#const colors
-C0:str = '\033[38;2;43;15;84m'		#PURPLE
-C1:str = '\033[38;2;255;0;35m'		#RED
-C2:str = '\033[38;2;255;247;248m'	#WHITE
-C3:str = '\033[38;2;255;218;69m'	#YELLOW
-C4:str = '\033[38;2;73;231;236m'	#CYAN
-C5:str = '\033[38;2;202;254;1m'		#GREEN
-
 #global vars
 targets:list[str] = []
 rules:list[str] = []
@@ -28,14 +20,14 @@ def title() -> None:
 def display_help() -> None:
 	"""Displays Pyhund's help"""
 	title()
-	print(f"\n{C2}[{C5}PyHund Help{C2}]\n\n{C5}Usage\033[0;0m\n\n\t{C2}PyHund {C4}-t {C2}targets {C4}-s {C2}scantype {C4}--rule {C2}... {C4}--harvest {C3}%harvester-opt ...\033[0;0m\n\n{C5}Required Args\033[0;0m\n  {C4}-t\t\t\033[0;0m[{C5}Target(s)\033[0;0m] {C2}Sets the target or targets to search for\033[0;0m\n  {C4}-s\t\t\033[0;0m[{C5}Scantype\033[0;0m] {C2}Sets the scantype to be used for scan\033[0;0m\n  {C4}-f\t\t\033[0;0m[{C5}Flag(s)\033[0;0m] {C2}Sets flags for filtering output [http-ver / validation-method]\033[0;0m\n\n{C5}Rules\033[0;0m\n  {C4}--no-url\t\033[0;0m[{C5}No Url\033[0;0m] {C2}Will not display the url of the site when found\033[0;0m\n  {C4}--no-err\t\033[0;0m[{C5}No Error\033[0;0m] {C2}Will not show bad responses\033[0;0m\n  {C4}--log\t\t\033[0;0m[{C5}Logging\033[0;0m] {C2}Logs output to file\033[0;0m\n\n{C5}Harvester\033[0;0m\n\n  {C1}If enabled will scrape important data from site pertaining to target\033[0;0m\n\n  {C4}%{C5}html{C2} Formats harvested data for html document\033[0;0m\n  {C4}%{C5}raw{C2} Provides no formatting but re-routes output to txt file\033[0;0m\n  {C4}%{C5}json{C2} formats output to a json format\033[0;0m\n")
+	print(f"\n\033[38;2;255;247;248m[\033[38;2;202;254;1mPyHund Help\033[38;2;255;247;248m]\n\n\033[38;2;202;254;1mUsage\033[0;0m\n\n\t\033[38;2;255;247;248mPyHund \033[38;2;73;231;236m-t \033[38;2;255;247;248mtargets \033[38;2;73;231;236m-s \033[38;2;255;247;248mscantype \033[38;2;73;231;236m--rule \033[38;2;255;247;248m... \033[38;2;73;231;236m--harvest \033[38;2;255;218;69m%harvester-opt ...\033[0;0m\n\n\033[38;2;202;254;1mRequired Args\033[0;0m\n  \033[38;2;73;231;236m-t\t\t\033[0;0m[\033[38;2;202;254;1mTarget(s)\033[0;0m] \033[38;2;255;247;248mSets the target or targets to search for\033[0;0m\n  \033[38;2;73;231;236m-s\t\t\033[0;0m[\033[38;2;202;254;1mScantype\033[0;0m] \033[38;2;255;247;248mSets the scantype to be used for scan\033[0;0m\n  \033[38;2;73;231;236m-f\t\t\033[0;0m[\033[38;2;202;254;1mFlag(s)\033[0;0m] \033[38;2;255;247;248mSets flags for filtering output [http-ver / validation-method]\033[0;0m\n\n\033[38;2;202;254;1mRules\033[0;0m\n  \033[38;2;73;231;236m--no-url\t\033[0;0m[\033[38;2;202;254;1mNo Url\033[0;0m] \033[38;2;255;247;248mWill not display the url of the site when found\033[0;0m\n  \033[38;2;73;231;236m--no-err\t\033[0;0m[\033[38;2;202;254;1mNo Error\033[0;0m] \033[38;2;255;247;248mWill not show bad responses\033[0;0m\n  \033[38;2;73;231;236m--log\t\t\033[0;0m[\033[38;2;202;254;1mLogging\033[0;0m] \033[38;2;255;247;248mLogs output to file\033[0;0m\n\n\033[38;2;202;254;1mHarvester\033[0;0m\n\n  \033[38;2;202;254;1mhtml\033[38;2;255;247;248m Formats harvested data for html document\033[0;0m\n  \033[38;2;202;254;1mraw\033[38;2;255;247;248m  Provides no formatting but re-routes output to txt file\033[0;0m\n  \033[38;2;202;254;1mjson\033[38;2;255;247;248m formats output to a json format\033[0;0m\n")
+	sys.exit()
 
 def check_args() -> None:
 	"""Checks arguments and sets pertinent data"""
 	
 	if '-t' not in sys.argv or 'help' in sys.argv or len(sys.argv) == 1:
 		display_help()
-		sys.exit()
 
 	global targets
 	global scan_data
@@ -73,7 +65,7 @@ def check_args() -> None:
 		try:
 			scan_data = open('lib/scans/'+scan, 'r').read().split('\n')
 		except FileNotFoundError:
-			print(f'{C1}Scan not recognised!\033[0;0m')
+			print('\033[38;2;255;0;35mScan not recognized!\033[0;0m')
 			sys.exit()		
 
 	Log(len(scan_data))
@@ -89,7 +81,7 @@ def scan_clients() -> None:
 	"""Starts scanning provided clients"""
 
 	for target in targets:
-		print(C5+target+'\033[0;0;0m')
+		print('\033[38;2;202;254;1m'+target+'\033[0;0;0m')
 		for site in scan_data:
 			if not site:
 				continue
@@ -144,6 +136,6 @@ def main() -> None:
 		print(f"\r{C1}Terminated\033[0m")
 
 if __name__ == '__main__':
-	Log(f"Debug [{C5}ON\033[0;0m]")
+	Log(f"Debug [\033[38;2;202;254;1mON\033[0;0m]")
 	main()
 	Log("Program Terminated")
