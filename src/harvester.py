@@ -2,7 +2,7 @@
 
 import json
 import re
-from src.util import Log
+from .util import Log
 
 #Global Variables
 site_tokens = json.load(open("lib/manifest.json","r"))
@@ -33,29 +33,30 @@ site_tokens = json.load(open("lib/manifest.json","r"))
 #Will try to condense data on a per-site basis
 
 def harvest(site_name:str, html_content:str) -> dict:
-	"""
-	Harvest
-	Used to harvest user data from provided html file
-	will use harvester tokens to identify important data
-	:param html_content: string containing all html data of the page
-	:returns: dictionary containing all parsed content
-	"""
+	"""Harvest data from given website"""
 
 	tokens:dict = site_tokens[site_name]
-	Log(tokens)
+	Log(_tokens)
 
-	data:dict = {token:re.search(tokens[token], html_content) for token in tokens if token}
+	_data:dict = {_token : re.search(_tokens[token], html_content) for _token in _tokens if _token}
 
-	#for token in tokens:
-	#	Log(token_set, tokens[token])
-	#	segment:str = re.search(tokens[token], html_content)
-	#	data[token_set] = segment
+	Log(_data)
 
-	Log(data)
-
-	return data
+	return _data
 
 
-def form_html(data:dict):
+def _html(data:dict) -> None:
 	"""Generates html document from dict"""
-	pass
+	raise NotImplementedError
+
+def _sv(data:dict, delimeter:str = ',') -> None:
+	"""Generates csv/tsv file from dict"""
+	raise NotImplementedError
+
+def _txt(data:dict) -> None:
+	"""Generates a text file from dict"""
+	raise NotImplementedError
+
+def _json(data:dict) -> None:
+	"""Generates json document from dict"""
+	json.dump(data, open('out.json', 'w'))
