@@ -35,7 +35,7 @@ def check_args() -> None:
 	global harvest
 	global h_rules
 	global filters
-	
+
 	for _t in sys.argv[sys.argv.index('-t') + 1:]:
 		if _t.startswith('-'):
 			break
@@ -44,17 +44,19 @@ def check_args() -> None:
 
 	if '-f' in sys.argv:
 		for _filter in sys.argv[sys.argv.index('-f')+1:]:
-			Log(_filter)
 			if _filter.startswith('-'):
 				break
-
 			if _filter.startswith('http-ver'):
 				Log('HTTPVER - DETECTED')
-				filters['http-ver'] = int(_filter.split('=')[-1])
+				try:
+					filters['http-ver'] = int(_filter.split('=')[-1])
+				except ValueError:
+					print('\033[38;2;255;0;35mhttp-ver must be an int\033[0m')
 			elif _filter.startswith('verify-method'):
 				Log('VERIFYMETHOD - DETECTED')
 				filters['verify-method'] = _filter.split('=')[-1].split(',')
 
+	#TODO add to display help '-S\t[sites] Used to add sites to be scanned'
 	if '-S' in sys.argv:
 		for _s in sys.argv[sys.argv.index('-S') + 1:]:
 			if _s.startswith('-'):
