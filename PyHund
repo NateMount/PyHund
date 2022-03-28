@@ -117,13 +117,13 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	"""Displays response for site based on rules"""
 
 	if not is_valid and '--no-err' not in rules:
-		print(f"{C1}[!] {C3}{site}\033[0;0;0m")
+		print(f"\033[38;2;255;0;35m[!] \033[38;2;255;218;69m{site}\033[0;0;0m")
 	elif not is_valid:
 		pass
 	elif is_valid and '--no-url' in rules:
-		print(f"\t{C3} {site} \033[0;0;0m")
+		print(f"\t\033[38;2;255;218;69m {site} \033[0;0;0m")
 	else:
-		print(f"\t{C3}{site}{C4} {data.url} \033[0;0;0m")
+		print(f"\t\033[38;2;255;218;69m{site}\033[38;2;73;231;236m {data.url} \033[0;0;0m")
 
 def main() -> None:
 	try:
@@ -133,7 +133,7 @@ def main() -> None:
 	try:
 		scan_clients()
 	except KeyboardInterrupt:
-		print(f"\r{C1}Terminated\033[0m")
+		print(f"\r\033[38;2;255;0;35mTerminated\033[0m")
 
 if __name__ == '__main__':
 	Log(f"Debug [\033[38;2;202;254;1mON\033[0;0m]")
