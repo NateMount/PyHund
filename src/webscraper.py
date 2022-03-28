@@ -26,13 +26,17 @@ def get(site_name:str, username:str):
 
 	site_data:dict = get_site(site_name)
 
-	#TODO Simplify
 	try:
-		site_head = site_data["headers"]
+		_h = site_data["headers"]
 	except KeyError:
-		site_head = {}
+		_h = {}
+	
+	try:
+		_c = site_data["cookies"]
+	except KeyError:
+		_c = {}
 
 	try:
-		return r.get(site_data["url"].format(username), headers=site_head)
+		return r.get(site_data["url"].format(username), headers=_h, cookies=_c)
 	except r.ConnectionError:
 		return None
