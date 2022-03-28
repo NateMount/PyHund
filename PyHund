@@ -82,14 +82,14 @@ def check_args() -> None:
 def scan_clients() -> None:
 	"""Starts scanning provided clients"""
 
-	for target in targets:
-		print('\033[38;2;202;254;1m'+target+'\033[0;0;0m')
-		for site in scan_data:
-			if not site:
+	for _t in targets:
+		print('\033[38;2;202;254;1m'+ _t +'\033[0;0;0m')
+		for _s in scan_data:
+			if not _s:
 				continue
 
-			Log(site)
-			site_data:dict = get_site(site)
+			Log(_s)
+			site_data:dict = get_site(_s)
 
 			if not site_data:
 				continue
@@ -104,14 +104,14 @@ def scan_clients() -> None:
 					continue
 
 			if site_data['http-version'] == 1:
-				data = get(site, target)
+				_d = get(_s, _t)
 			elif site_data['http-version'] == 2:
-				data = get_hyper(site, target)
+				_d = get_hyper(_s, _t)
 			else:
-				Log(f"{C1}Unknown http-version{C3}", site_data['http-version'], '\033[0m')
+				Log(f"\033[38;2;255;0;35mUnknown http-version\033[38;2;255;218;69m", site_data['http-version'], '\033[0m')
 				continue
 
-			display_response(target, site, data, verify(site, data))
+			display_response(_t, _s, _d, verify(_s, _d))
 		print('')
 
 
