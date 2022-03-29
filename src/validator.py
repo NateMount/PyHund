@@ -11,7 +11,7 @@ def verify(site_name:str, site) -> bool:
 	if not _data:
 		return False
 
-	match site_data['verify-method']:
+	match _data['verify-method']:
 		case 'status':
 			if 'verify-str' in _data:
 				return site.status_code == int(_data['verify-str'])
