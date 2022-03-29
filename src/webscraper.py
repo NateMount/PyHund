@@ -18,7 +18,7 @@ def get_site(site_name:str) -> dict:
 def get_hyper(site_name:str, username:str):
 	"""get site using hyper from name and target username"""
 
-	return NotImplementedError
+	raise NotImplementedError
 
 
 def get(site_name:str, username:str):
