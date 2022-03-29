@@ -103,13 +103,7 @@ def scan_clients() -> None:
 				if site_data['verify-method'] not in filters['verify-method']:
 					continue
 
-			if site_data['http-version'] == 1:
-				_d = get(_s, _t)
-			elif site_data['http-version'] == 2:
-				_d = get_hyper(_s, _t)
-			else:
-				Log(f"\033[38;2;255;0;35mUnknown http-version\033[38;2;255;218;69m", site_data['http-version'], '\033[0m')
-				continue
+			_d = get(_s, _t) if site_data['http-version'] == 1 else get_hyper(_s, _t)
 
 			display_response(_t, _s, _d, verify(_s, _d))
 		print('')
