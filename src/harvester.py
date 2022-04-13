@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import json
+import yaml
 import re
 from .util import Log
 
@@ -44,19 +45,3 @@ def harvest(site_name:str, html_content:str) -> dict:
 
 	return _data
 
-
-def _html(data:dict) -> None:
-	"""Generates html document from dict"""
-	raise NotImplementedError
-
-def _sv(data:dict, delimeter:str = ',') -> None:
-	"""Generates csv/tsv file from dict"""
-	raise NotImplementedError
-
-def _txt(data:dict) -> None:
-	"""Generates a text file from dict"""
-	raise NotImplementedError
-
-def _json(data:dict) -> None:
-	"""Generates json document from dict"""
-	json.dump(data, open('out.json', 'w'))
