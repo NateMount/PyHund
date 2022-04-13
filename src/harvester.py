@@ -1,8 +1,9 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python3.10
 
 import json
 import yaml
 import re
+from .webscraper import get_site
 from .util import Log
 
 #Global Variables
@@ -33,7 +34,39 @@ site_tokens = json.load(open("lib/manifest.json","r"))
 #document including pictures and videos
 #Will try to condense data on a per-site basis
 
-def harvest(site_name:str, html_content:str) -> dict:
+def harvest_clients(targets:list, scan_data:list) -> None:
+	"""
+	Harvest data for all clients
+	"""
+
+	_data = {}
+	for _t in targets:
+		_data[_t] = {}
+		for _s in scan_data:
+			if not _s:
+				continue
+
+			Log(_s)
+			site_data:dict = get_site(_s)
+
+			if not site_data:
+				continue
+
+			if site_data[_s]['harvester-tokens'] == {}:
+				continue
+
+			html_content = get(_s, _t).text if site_data['http-version'] == 1 else ""
+
+			_data[_t][_s] == _harvest(_s, html_content)
+
+	if 'json' in sys.argv:
+		json.dump(_data, open('out.json','w'))
+	elif 'yaml' in sys.argv:
+		yaml.dump(_data, open('out.yaml', 'w'))
+	else:
+		print(_data)
+
+def _harvest(site_name:str, html_content:str) -> dict:
 	"""Harvest data from given website"""
 
 	tokens:dict = site_tokens[site_name]
