@@ -70,7 +70,7 @@ def harvest_clients(targets:list, scan_data:list) -> None:
 def _harvest(site_name:str, html_content:str) -> dict:
 	"""Harvest data from given website"""
 
-	_tokens:dict = site_tokens[site_name]
+	_tokens:dict = site_tokens[site_name]['harvester-tokens']
 	Log(f"TOKENS : {_tokens}")
 
 	_data = {}
@@ -79,7 +79,7 @@ def _harvest(site_name:str, html_content:str) -> dict:
 		if not _tok:
 			continue
 
-		Log(_tok)
+		Log(f"TOKEN : {_tok}")
 
 		_r = re.search(fr"{_tokens[_tok]}", html_content)
 		if _r:
