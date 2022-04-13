@@ -71,7 +71,7 @@ def _harvest(site_name:str, html_content:str) -> dict:
 	"""Harvest data from given website"""
 
 	_tokens:dict = site_tokens[site_name]
-	Log(_tokens)
+	Log(f"TOKENS : {_tokens}")
 
 	_data = {}
 
@@ -79,8 +79,11 @@ def _harvest(site_name:str, html_content:str) -> dict:
 		if not _tok:
 			continue
 
-		_r = re.search(fr"{_tokens[_token]}", html_content)
+		Log(_tok)
+
+		_r = re.search(fr"{_tokens[_tok]}", html_content)
 		if _r:
+			Log(_r[0])
 			_data[_tok] = _r[0]
 
 	Log(_data)
