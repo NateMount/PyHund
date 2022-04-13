@@ -6,7 +6,7 @@
     "harvester-tokens": {
       "Username": "(?<=username\\\":\\\")[\\w\\s\\d]+(?=\\\")",
       "Owner-Id": "(?<=ownerId\\\":)\\d+(?=,)",
-      "Name": "(?<=\\\"name\\\":\\\")[\\w\\s\\d]+(?=\\\")"
+      "Name": "(?<=\\\"name\\\":)[\\w\\s\\d]+(?=,\\\")"
     }
   },
   "3dnews": {
@@ -20,7 +20,16 @@
     "http-version": 1,
     "url": "https://www.7cups.com/@{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Ratings-Count": "(?<=Ratings: <\\/td>\\s+<td class=\"data\">)\\d+(?=<\\/td>)",
+      "Reviews-Count": "(?<=Reviews: <\\/td>\\s+<td class=\"data\">)\\d+(?=<\\/td>)",
+      "Listens-To": "(?<=Listens to<\\/td>\\s+<td class=\"data\">)[\\w\\d\\s]+(?=<\\/td>)",
+      "Languages": "(?<=Languages<\\/td>\\s+<td class=\"data\">)[\\w\\s]+(?=<\\/td>)",
+      "Joined": "(?<=Since<\\/td>\\s+<td class=\"data\">\\s*)\\w\\w\\w\\s\\d\\d,\\s\\d+(?=\\s+<\\/td>)",
+      "Last-Active": "(?<=Active<\\/td>\\s+<td class=\"data\">)[\\w\\d\\s]+(?=<\\/td>)",
+      "Gender": "(?<=Gender<\\/td>\\s+<td class=\"data\">)\\w+(?=<\\/td>)",
+      "Chat-Count": "(?<=>Chats<\\/td>\\s+<td class=\"data\">)\\d+(?=<\\/td>)"
+    }
   },
   "9gag": {
     "http-version": 2,
@@ -197,7 +206,11 @@
     "http-version": 1,
     "url": "https://bitbucket.org/{}/",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Display-Name": "(?<=display_name\": \")[\\w\\s\\d]+(?=\\\",)",
+      "Account-Id": "(?<=account_id\\\": \\\")[\\w\\s\\d\\:-]+(?=\\\",)",
+      "Is-Staff": "(?<=is_staff\": )[(true)(false)]+(?=,)"
+    }
   },
   "bitcoinforum": {
     "http-version": 1,
@@ -300,7 +313,10 @@
     "http-version": 1,
     "url": "https://www.chess.com/member/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Joined": "(?<=Joined'\"><\/span>\\s+<div\\s+class=\"profile-card-info-item-value\"\\s+>)\\w+\\s\\d+,\\s\\d+(?=<\\/div>)",
+      "Followers": "(?<=Views'\"><\/span>\\s+<div\\s+class=\"profile-card-info-item-value\"\\s+>)\\d+(?=<\\/div>)"
+    }
   },
   "cloudflarecommunity": {
     "http-version": 1,
@@ -600,7 +616,11 @@
     "http-version": 1,
     "url": "https://my.flightradar24.com/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Domestic-Flight-Count": "(?<=<span class=\"sub-text\"><b>)\\d+(?=<\\/b> domestic)",
+      "International-Flight-Count": "(?<=domestic<\\/span>\\s+<span class=\"sub-text\"><b>)\\d+(?=<\\/b>)",
+      "Flight-Count": "(?<=<section class=\"summary-card\">\\s+<h2>)\\d+(?= <a href=\"\\/john\\/flights)"
+    }
   },
   "flipboard": {
     "http-version": 1,
@@ -702,7 +722,11 @@
     "http-version": 1,
     "url": "https://www.github.com/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Yearly-Contributions": "(?<=yearly-contributions\">  <div class=\"position-relative\">\\s+<h2 class=\"f4 text-normal mb-2\">\\s+)\\d+(?=\\s)",
+      "Name": "(?<=name\">          )[\\w\\d\\s]+(?=        )",
+      "User-Status": "(?<=user-status-message-wrapper f6 color-fg-default ws-normal lh-condensed\" >\\s+<div>)[\\w\\d\\s]+(?=<)"
+    }
   },
   "github support community": {
     "http-version": 1,
