@@ -4,7 +4,7 @@ import os, sys
 from src.util import Log
 from src.webscraper import get, get_hyper, get_site
 from src.validator import verify
-#from src.harvester import harvest
+from src.harvester import harvest_clients
 
 #global vars
 targets = []
@@ -124,7 +124,7 @@ def main() -> None:
 	except IndexError:
 		sys.exit()
 	try:
-		scan_clients()
+		scan_clients() if '--harvest' not in sys.argv else harvest_clients(targets, scan_data)
 	except KeyboardInterrupt:
 		print(f"\r\033[38;2;255;0;35mTerminated\033[0m")
 
