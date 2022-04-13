@@ -1,10 +1,13 @@
 {
   "rive": {
-    "http-version": 2,
-    "url": "https://rive.app/a/{}",
-    "verify-method": "match",
-    "verify-str": "",
-    "harvester-tokens": {}
+    "http-version": 1,
+    "url": "https://rive.app/{}",
+    "verify-method": "status",
+    "harvester-tokens": {
+      "Username": "(?<=username\\\":\\\")[\\w\\s\\d]+(?=\\\")",
+      "Owner-Id": "(?<=ownerId\\\":)\\d+(?=,)",
+      "Name": "(?<=\\\"name\\\":\\\")[\\w\\s\\d]+(?=\\\")"
+    }
   },
   "3dnews": {
     "http-version": 1,
