@@ -3,7 +3,8 @@
 import json
 import yaml
 import re
-from .webscraper import get_site
+import sys
+from .webscraper import get_site, get
 from .util import Log
 
 #Global Variables
@@ -52,12 +53,12 @@ def harvest_clients(targets:list, scan_data:list) -> None:
 			if not site_data:
 				continue
 
-			if site_data[_s]['harvester-tokens'] == {}:
+			if site_data['harvester-tokens'] == {}:
 				continue
 
 			html_content = get(_s, _t).text if site_data['http-version'] == 1 else ""
 
-			_data[_t][_s] == _harvest(_s, html_content)
+			_data[_t][_s] = _harvest(_s, html_content)
 
 	if 'json' in sys.argv:
 		json.dump(_data, open('out.json','w'))
@@ -69,10 +70,18 @@ def harvest_clients(targets:list, scan_data:list) -> None:
 def _harvest(site_name:str, html_content:str) -> dict:
 	"""Harvest data from given website"""
 
-	tokens:dict = site_tokens[site_name]
+	_tokens:dict = site_tokens[site_name]
 	Log(_tokens)
 
-	_data:dict = {_token : re.search(_tokens[token], html_content) for _token in _tokens if _token}
+	_data = {}
+
+	for _tok in _tokens:
+		if not _tok:
+			continue
+
+		_r = re.search(fr"{_tokens[_token]}", html_content)
+		if _r:
+			_data[_tok] = _r[0]
 
 	Log(_data)
 
