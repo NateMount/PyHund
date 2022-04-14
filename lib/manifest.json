@@ -47,13 +47,29 @@
     "http-version": 1,
     "url": "https://independent.academia.edu/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "User-Id": "(?<=\"id\":)\\d+(?=,)",
+      "First-Name": "(?<=\"first_name\":)[\\w\"]+(?=,)",
+      "Middle-Initial": "(?<=\"middle_initials\":)[\\w\"]+(?=,)",
+      "Last-Name": "(?<=\"last_name\":)[\\w\"]+(?=,)",
+      "Domain-Name": "(?<=\"domain_name\":)[\\w\"]+(?=,)",
+      "Following-Count": "(?<=followees-count\"><span class=\"u-fw700\">)[\\d,]+(?=<)",
+      "Followers-Count": "(?<=followers-count\"><span class=\"u-fw700\">)[\\d,]+(?=<)"
+    }
   },
   "airliners": {
     "http-version": 1,
-    "url": "https://www.airliners.net/user/{}/profile/photos",
+    "url": "https://www.airliners.net/user/{}/profile",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Follower-Count": "(?<=Followers<span class=\"up-follow-label\">)[\\d,]+(?=<)",
+      "Following-Count": "(?<=following\">)[\\d,]+(?=)",
+      "Photo-Count": "(?<=<div class=\"up-circle-value\">\\s+)[\\d,]+(?=\\s+<span class=\"up-circle-value-postfix\"></span></div><div class=\"up-circle-label\">\\s+Photos)",
+      "View-Count": "(?<=<div class=\"up-circle-value\">\\s+)[\\d,]+(?=\\s+<span class=\"up-circle-value-postfix\"></span></div><div class=\"up-circle-label\">\\s+Views)",
+      "Last-Seen": "(?<=Last seen)[\\d\\w\\s]+(?=\\s)",
+      "Last-Forum-Post": "(?<=Last forum post)[\\d\\w\\s]+(?=\\s)",
+      "Location": "(?<=fa fa-fw fa-map-marker\"></i>)[\\d\\w\\s,]+(?=<)"
+    }
   },
   "athlinks":{
     "http-version": 1,
@@ -1225,7 +1241,27 @@
     "http-version": 1,
     "url": "https://myanimelist.net/profile/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Last-Online": "(?<=Last Online<\\/span><span class=\"user-status-data di-ib fl-r\">)[\\w\\s\\d\\:,]+(?=<)",
+      "Gender": "(?<=Gender<\\/span><span class=\"user-status-data di-ib fl-r\">)\\w+(?=<)",
+      "Joined": "(?<=Joined</span><span class=\"user-status-data di-ib fl-r\">)\\w+ \\d+, \\d+(?=<)",
+      "Birthday": "(?<=Birthday<\\/span><span class=\"user-status-data di-ib fl-r\">)\\w+ \\d+, \\d+(?=<)",
+      "Forum-Post-Count": "(?<=m Posts</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Review-Count": "(?<=Reviews</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Recommendation-Count": "(?<=Recommendations</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Interest-Stack-Count": "(?<=Interest Stacks</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Blog-Post-Count": "(?<=Blog Posts</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Clubs-Count": "(?<=Clubs</span><span class=\"user-status-data di-ib fl-r fw-b\">)[\\d,]+(?=<)",
+      "Freind-Count": "(?<=All \\()[\\d+,](?=\\))",
+      "Watching-Count": "(?<=Watching</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)",
+      "Compleated-Anime-Count": "(?<=Completed</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)",
+      "Planning-To-Watch-Count": "(?<=Watch</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)",
+      "Total-Anime-Entries": "(?<=Total Entries</span><span class=\"di-ib fl-r\">)[\\d,]+(?=<)",
+      "Episodes-Viewed-Count": "(?<=Episodes</span><span class=\"di-ib fl-r\">)[\\d,]+(?=<)",
+      "Manga-Reading-Count": "(?<=Reading</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)",
+      "Manga-Compleated-Count": "(?<=manga completed\">Completed</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)",
+      "Planning-To-Read-Count": "(?<=Plan to Read</a><span class=\"di-ib fl-r lh10\">)[\\d,]+(?=<)"
+    }
   },
   "myminifactory": {
     "http-version": 1,
