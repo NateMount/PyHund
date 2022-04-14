@@ -115,6 +115,9 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 	_c, _ic = ('\033[38;2;255;0;35m', '!') if not is_valid else ('\033[38;2;202;254;1m', site)
 	_e = site if not is_valid else data.url
 
+	if not is_valid and '--no-err' in sys.argv:
+		return
+
 	print(f"{_c}[{_ic}]\033[0m\033[38;2;255;218;69m {_e}")
 
 
