@@ -101,7 +101,11 @@
     "http-version": 1,
     "url": "https://allmylinks.com/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Profile-Description": "(?<=profile-bio\">).+(?=<\\/p><di)",
+      "User-Tag": "(?<=profile-usertag\">)[\\w\\@]+(?= )",
+      "Birthday": "(?<=Birthday\"><iclass=\"all-my-icon-i040\"><\/i>)[\\w\\s\\d]+(?=<)"
+    }
   },
   "aminoapp": {
     "http-version": 1,
@@ -273,12 +277,24 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
-  "Caffine": {
+  "caffine": {
     "http-version": 1,
     "url": "https://www.caffeine.tv/{}",
     "verify-method": "match",
     "verify-str": "",
     "harvester-tokens": {}
+  },
+  "cashapp": {
+    "http-version": 1,
+    "url": "https://cash.app/${}",
+    "verify-method": "status",
+    "harvester-tokens": {
+      "Display-Name": "(?<=display_name\":).+(?=,\"ca)",
+      "Account-Id": "(?<=id\":).+(?=,\"di)",
+      "Default-Currency": "(?<=default_currency\":).+(?=,\"c)",
+      "Country-Code": "(?<=country_code\":).+(?=,\"av)",
+      "Profile-Image": "(?<=image_url\":).+(?=,\"in)"
+    }
   },
   "capfriendly": {
     "http-version": 1,
