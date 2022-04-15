@@ -201,7 +201,12 @@
     "http-version": 1,
     "url": "https://www.bandcamp.com/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Collection-Count": "(?<=collection <span class=\"count\">)[\\d,]+(?=)",
+      "Wishlist-Count": "(?<=wishlist <span class=\"count\">)[\\d,]+(?=)",
+      "Follower-Count": "(?<=ers <span class=\"count\">)[\\d,]+(?=)",
+      "Following-Count": "(?<=ng <span class=\"count\">)[\\d,]+(?=)"
+    }
   },
   "bebee": {
     "http-version": 1,
@@ -275,7 +280,11 @@
     "http-version": 1,
     "url": "https://buzzfeed.com/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Comment-Count": "(?<=comments</dt><dd>)[\\d,\\.]+(?=<)",
+      "Post-Count": "(?<=posts</dt><dd>)[\\d,\\.]+(?=<)",
+      "Joined": "(?<=joined</dt><dd>).+(?=</dd></div></div><di)"
+    }
   },
   "caffine": {
     "http-version": 1,
@@ -1431,7 +1440,11 @@
     "http-version": 1,
     "url": "https://pastebin.com/u/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "User-Pastes-Views": "(?<=users pastes\">)[\\d,\\.]+(?=<)",
+      "Account-Views": "(?<=viewed\">)[\\d,\\.]+(?=<)",
+      "Joined": "(?<=joined Pastebin\"><\/span>\\s+<span>\\s+<span class=\"date-text\" title=)[\\w\\s\\d\\:\\,\\\"]+(?=)"
+    }
   },
   "patreon": {
     "http-version": 1,
@@ -1591,7 +1604,13 @@
     "http-version": 1,
     "url": "https://www.roblox.com/user.aspx?username={}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Descripton": "(?<=ng-non-bindable>)[\\w\\s]+(?=</span)",
+      "Profile-Id": "(?<=profileuserid=)[\\\"\\d]+(?=)",
+      "Friends-Count": "(?<=friendscount=)[\\\"\\d]+(?=)",
+      "Followers-Count": "(?<=followerscount=)[\\\"\\d]+(?=)",
+      "Following-Count": "(?<=followingscount=)[\\\"\\d]+(?=)"
+    }
   },
   "reverbnation": {
     "http-version": 1,
@@ -1845,14 +1864,14 @@
     "verify-method": "status",
     "harvester-tokens": {}
   },
-  "Trovo": {
+  "trovo": {
     "http-version":1,
     "url": "https://trovo.live/{}",
     "verify-method": "match",
     "verify-str": "",
     "harvester-tokens": {}
   },
-  "Triller": {
+  "triller": {
     "http-version": 1,
     "url": "https://triller.co/@{}",
     "verify-method": "match",
@@ -2113,5 +2132,21 @@
     "url": "https://tracker.gg/lol/profile/riot/LAN/{}/overview",
     "verify-method": "status",
     "harvester-tokens": {}
+  },
+  "clapperapp": {
+    "http-version": 1,
+    "url": "https://clapperapp.com/{}",
+    "verify-method": "status",
+    "harvester-tokens": {
+      "Descripton": "(?<=bio\">).+(?=</div> <!----> )",
+      "Following-Count": "(?<=following_count:)\\d+(?=,)",
+      "Follower-Count": "(?<=followers_count:)\\d+(?=,)",
+      "Likes-Count": "(?<=likes_count:)\\d+(?=,)",
+      "Item-View-Count": "(?<=item_views:)\\d+(?=,)",
+      "Views-Count": "(?<=views_count:)\\d+(?=,)",
+      "Video-Count": "(?<=video_count:)\\d+(?=,)",
+      "Comment-Count": "(?<=comment_count:)\\d+(?=})",
+      "Profile-Image": "(?<=image\" content=)[\\w\\d:/=,\\.-\\s\"]+(?=>)"
+    }
   }
 }
