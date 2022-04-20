@@ -3,7 +3,7 @@
 import os, sys
 import json
 
-SITE_INDEX:dict = json.load(open(os.getcwd()+'/lib/manifest.json', 'r'))
+SITE_INDEX:dict = json.load(open(os.environ["HOME"]+'/.pyhund/lib/manifest.json', 'r'))
 
 def display_site(name):
 	try:
