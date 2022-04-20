@@ -58,6 +58,11 @@ def harvest_clients(targets:list, scan_data:list) -> None:
 
 			html_content = get(_s, _t).text if site_data['http-version'] == 1 else ""
 
+			if '::filter' in site_data['harvester-tokens']:
+				for _f in site_data['harvester-tokens']['::filter']:
+					html_content.replace(_f, "")
+
+
 			_data[_t][_s] = _harvest(_s, html_content)
 
 	if 'json' in sys.argv:
