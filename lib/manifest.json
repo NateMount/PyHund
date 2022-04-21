@@ -579,7 +579,19 @@
     "http-version": 1,
     "url": "https://elpha.com/members/{}?tab=about",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "cookies":{
+      "G_ENABLED_IDPS": "google",
+      "sess": "NWp2MU9FTTZnN3NORmEwMXFyUmZSaFIvZHpUWGxqSG04T0oxbHQwS3lGL3ZMNFEvWVZ3eERuZGVVeDI5M3F2bS0tVnFBR2hnTjJXcXcySER2b1VrWGhKZz09--a29f8023286249e4136c5059b96c930b82524413",
+      "_span_session": "NEJGM2dGeHpSY1ptRm5PYmZVNG4yN1RjS1FoSnZlNnprWHR0bklmMjFMWnpZbVJRNUxUdFMvWU1wVzRsRjBPLzN5dW5YZUZZd1lzL2JpTGZSWjcwK1h6TmRDN1pOTmw3bXorOGdvNGdYNjlDVjFZODJEYWg3anJLY01SNDlDUlJWRHRUeDJrVU1KdjJyQWYxTkR6SGVBPT0tLTBQTjkySTd1Y3d3b3B0OEpTb1Era0E9PQ%3D%3D--3c94ba5bcff0b5b62803f1c14a058492ba211534"
+    },
+    "harvester-tokens": {
+      "::filter":["&quot"],
+      "::index":1,
+      "Followers-Count": "(?<=followers_count;:)[\\w\\s\\.]+(?=,)",
+      "Following-Count": "(?<=followings_count;:)[\\w\\s\\.]+(?=,)",
+      "User-Title": "(?<=title[\\:\\;]+)[\\w]+(?=[\\:\\;,])",
+      "Username": "(?<=username[\\:\\;]+)[\\w\\s\\.]+(?=[\\:\\;,])"
+    }
   },
   "egpu": {
     "http-version": 1,
@@ -589,21 +601,46 @@
   },
   "eintracht": {
     "http-version": 1,
-    "url": "https://community.eintracht.de/fans/{}",
+    "url": "https://community.eintracht.de/fans/{}/freundschaften",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Profile-Visitor-Count": "(?<=Profilbesucher\">)[\\w\\.,]+(?=<)"
+    }
   },
   "ello": {
     "http-version": 1,
     "url": "https://ello.co/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Post-Count": "(?<=>)[\\w\\.K]+(?=\\sPos)",
+      "Follower-Count": "(?<=>)[\\w\\.K]+(?=\\sFollowers)",
+      "Love-Count": "(?<=\">)[\\w\\.K]+(?=\\sLoves)",
+      "Post-View-Count": "(?<=>)[\\w]+(?=\\sTot)",
+      "Following-Count": "(?<=>)[\\w\\.K]+(?=\\sFollowi)",
+      "Descripton": "(?<=<\\/h2><p>).+(?=<\\/p>\\s+<p>)"
+    }
   },
   "etsy": {
     "http-version": 1,
     "url": "https://www.etsy.com/shop/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Location": "(?<=user_location\">)[\\w,\\s]+(?=<)"
+    }
+  },
+  "ebay": {
+    "http-version": 1,
+    "url": "https://www.ebay.com/usr/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {
+      "Positive-Review-Count": "(?<=Positive.+num\">)[\\w,]+(?=<.+Positive)",
+      "Joined": "(?<=Member since.+fo\">)[\\w,\\s]+(?=<\\/span)",
+      "Location": "(?<=loc\">)[\\w,\\s]+(?=<)",
+      "Negative-Review-Count": "(?<=Negative.+>)[\\w,\\s]+(?=<.+Negative)",
+      "Neutral-Review-Count": "(?<=Neutral.+>)[\\w,\\s]+(?=<.+Neutral)",
+      "Star-Count": "(?<=score&nbsp;</span>)[\\w]+(?=<)"
+    }
   },
   "euw": {
     "http-version": 1,
@@ -821,9 +858,13 @@
   },
   "gravatar": {
     "http-version": 1,
-    "url": "http://en.gravatar.com/{}",
+    "url": "http://en.gravatar.com/{}.json",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Username": "(?<=Username\":)[\\[\\]\\w\"]+(?=,)",
+      "Id": "(?<=id\":)[\\[\\]\\w\"]+(?=,)",
+      "Name": "(?<=\"name\":)[\\[\\]\\w\"]+(?=,)"
+    }
   },
   "gumroad": {
     "http-version": 1,
@@ -907,7 +948,13 @@
     "url": "https://www.hexrpg.com/userinfo/{}",
     "verify-method": "match",
     "verify-str": "",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Name": "(?<=Real Name.+>)[\\w\\s,]+(?=<)",
+      "Age": "(?<=Age.+>)\\w+(?=<)",
+      "Location": "(?<=Location.+>)[\\w,\\s\\.]+(?=<)",
+      "Pronouns": "(?<=Pronouns.+>)[\\w,\\s\\.\\/]+(?=<)",
+      "Joined": "(?<=Enrollment.+>)[\\w,\\s]+(?=<)"
+    }
   },
   "houzz": {
     "http-version": 1,
@@ -950,9 +997,11 @@
   },
   "inkedfur": {
     "http-version": 1,
-    "url": "https://inkedfur.com/{}",
+    "url": "https://inkedfur.com/{}/profile",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Descripton": "(?<=content'><p>)[\\:\\;\\w\\s\\.,]+(?=<)"
+    }
   },
   "ifttt": {
     "http-version": 1,
@@ -1076,7 +1125,11 @@
     "http-version": 1,
     "url": "https://keybase.io/{}",
     "verify-method": "status",
-    "harvester-tokens": {}
+    "harvester-tokens": {
+      "Device-Count": "(?<=devices\">)\\w+(?= device)",
+      "Follower-Count": "(?<=Followers .+\\()\\w+(?=\\))",
+      "Following-Count": "(?<=Following .+\\()\\w+(?=\\))"
+    }
   },
   "kik": {
     "http-version": 1,
