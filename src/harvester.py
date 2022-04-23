@@ -82,14 +82,14 @@ def _harvest(site_name:str, html_content:str) -> dict:
 	_i = 0 if '::index' not in _tokens else _tokens['::index']
 
 	for _tok in _tokens:
-		if not _tok or if _tok.startswith('::'):
+		if not _tok or _tok.startswith('::'):
 			continue
 
 		Log(f"TOKEN : {_tok}")
 
 		_r = re.search(fr"{_tokens[_tok]}", html_content)
 		if _r:
-			if len(_r.groups()) < _i:):
+			if len(_r.groups()) < _i:
 				_i = len(_r.groups())
 			Log(_r[_i])
 			_data[_tok] = _r[_i]
