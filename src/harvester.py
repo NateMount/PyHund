@@ -86,8 +86,12 @@ def _harvest(site_name:str, html_content:str) -> dict:
 			continue
 
 		Log(f"TOKEN : {_tok}")
-
-		_r = re.search(fr"{_tokens[_tok]}", html_content)
+		
+		try:
+			_r = re.search(fr"{_tokens[_tok]}", html_content)
+		except re.error:
+			_r = None
+			print(f"\033[38;2;0;0;0m\033[48;2;238;137;14m CRITICAL ERROR \033[0m RegEx expression in harvester-tokens corrupted :: {_tok}")
 		if _r:
 			if len(_r.groups()) < _i:
 				_i = len(_r.groups())
