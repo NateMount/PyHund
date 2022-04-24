@@ -1571,6 +1571,13 @@
     "verify-str": "",
     "harvester-tokens": {}
   },
+  "paypal": {
+    "http-version": 1,
+    "url": "https://www.paypal.com/paypalme/{}",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
   "pinkbike": {
     "http-version": 1,
     "url": "https://www.pinkbike.com/u/{}/",
@@ -2227,5 +2234,19 @@
       "Comment-Count": "(?<=comment_count:)\\d+(?=})",
       "Profile-Image": "(?<=image\" content=)[\\w\\d:/=,\\.-\\s\"]+(?=>)"
     }
+  },
+  "fansly": {
+    "http-version": 1,
+    "url": "https://fansly.com/{}/posts",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
+  },
+  "manyvids": {
+    "http-version": 1,
+    "url": "https://www.manyvids.com/Profile/1004626158/{}/Store/Videos/",
+    "verify-method": "match",
+    "verify-str": "",
+    "harvester-tokens": {}
   }
 }
