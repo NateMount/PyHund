@@ -2248,5 +2248,17 @@
     "verify-method": "match",
     "verify-str": "",
     "harvester-tokens": {}
+  },
+  "iconscout": {
+    "http-version": 1,
+    "url": "https://iconscout.com/contributors/{}",
+    "verify-method": "url",
+    "verify-str": "contributors/",
+    "harvester-tokens": {
+      "Username": "(?<=0\\\">)[\\w]+(?=<)",
+      "Illistration-Count": "(?<=2\\\">)[\\w\\.\\,]+(?=<)",
+      "Joined": "(?<=Since\\s)[\\w\\,\\.\\s]+(?=<)",
+      "Location": "(?<=</span>\\s+)\\w+(?=\\s)"
+    }
   }
 }
