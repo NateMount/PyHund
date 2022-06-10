@@ -6,29 +6,27 @@ from src.webscraper import get, get_hyper, get_site
 from src.validator import verify
 from src.harvester import harvest_clients
 
-#global vars
-targets = []
-rules = []
-scan_data = []
-h_rules = []
-filters = {'http-ver':None, 'verify-method':None}
-
 def display_help() -> None:
 	"""Displays Pyhund's help"""
 	print(f"\t\t\033[38;2;255;218;69m _____\033[38;2;73;231;236m     _____           _ \n\t\t\033[38;2;255;218;69m|  _  |_ _\033[38;2;73;231;236m'  |  |_ _ ___ _| |\n\t\t\033[38;2;255;218;69m|   __| | |\033[38;2;73;231;236m     | | |   | . |\n\t\t\033[38;2;255;218;69m|__|  |_  |\033[38;2;73;231;236m__|__|___|_|_|___|\n\t\t\033[38;2;255;218;69m      |___|\033[0;0;0m\n\033[38;2;255;247;248m[\033[38;2;202;254;1mPyHund Help\033[38;2;255;247;248m]\n\n\033[38;2;202;254;1mUsage\033[0;0m\n\n\t\033[38;2;255;247;248mPyHund \033[38;2;73;231;236m-t \033[38;2;255;247;248mtargets \033[38;2;73;231;236m-s \033[38;2;255;247;248mscantype \033[38;2;73;231;236m--rule \033[38;2;255;247;248m... \033[38;2;73;231;236m--harvest \033[38;2;255;218;69m%harvester-opt ...\033[0;0m\n\n\033[38;2;202;254;1mRequired Args\033[0;0m\n  \033[38;2;73;231;236m-t\t\t\033[0;0m[\033[38;2;202;254;1mTarget(s)\033[0;0m] \033[38;2;255;247;248mSets the target or targets to search for\033[0;0m\n  \033[38;2;73;231;236m-s\t\t\033[0;0m[\033[38;2;202;254;1mScantype\033[0;0m] \033[38;2;255;247;248mSets the scantype to be used for scan\033[0;0m\n  \033[38;2;73;231;236m-f\t\t\033[0;0m[\033[38;2;202;254;1mFlag(s)\033[0;0m] \033[38;2;255;247;248mSets flags for filtering output [http-ver / validation-method]\033[0;0m\n\n\033[38;2;202;254;1mRules\033[0;0m\n  \033[38;2;73;231;236m--no-err\t\033[0;0m[\033[38;2;202;254;1mNo Error\033[0;0m] \033[38;2;255;247;248mWill not show bad responses\033[0;0m\n  \033[38;2;73;231;236m--log\t\t\033[0;0m[\033[38;2;202;254;1mLogging\033[0;0m] \033[38;2;255;247;248mLogs output to file\033[0;0m\n\n\033[38;2;202;254;1mHarvester\033[0;0m\n\n  \033[38;2;202;254;1mhtml\033[38;2;255;247;248m Formats harvested data for html document\033[0;0m\n  \033[38;2;202;254;1mraw\033[38;2;255;247;248m  Provides no formatting but re-routes output to txt file\033[0;0m\n  \033[38;2;202;254;1mjson\033[38;2;255;247;248m formats output to a json format\033[0;0m\n")
 	exit()
 
-def check_args() -> None:
+def load_args() -> None:
 	"""Checks arguments and sets pertinent data"""
 
-	if '--help' in argv:
+	targets = []
+	scan_data = []
+	filters = {'http-ver':None, 'verify-method':None}
+
+	if '--help' in argv or len(argv) == 1:
 		display_help()
 
-	for _t in argv[argv.index('-t') + 1:]:
-		if _t.startswith('-'):
-			break
-		targets.append(_t)
-	Log(targets)
+	if '-t' in argv:
+		for _t in argv[argv.index('-t') + 1:]:
+			if _t.startswith('-'):
+				break
+			targets.append(_t)
+		Log(targets)
 
 	if '-f' in argv:
 		for _filter in argv[argv.index('-f')+1:]:
@@ -44,13 +42,13 @@ def check_args() -> None:
 				Log('VERIFYMETHOD - DETECTED')
 				filters['verify-method'] = _filter.split('=')[-1].split(',')
 
-	#TODO add to display help '-S\t[sites] Used to add sites to be scanned'
 	if '-S' in argv:
 		for _s in argv[argv.index('-S') + 1:]:
 			if _s.startswith('-'):
 				break
 			scan_data.append(_s.lower())
-	else:
+	
+	if '-s' in argv:
 		scan = argv[argv.index('-s') + 1]
 		try:
 			scan_data = open('lib/scans/'+scan, 'r').read().split('\n')
@@ -58,14 +56,12 @@ def check_args() -> None:
 			print('\033[38;2;255;0;35mScan not recognized!\033[0;0m')
 			exit()		
 
-	Log(len(scan_data))
-
-	rules = [ _r for _r in argv if _r.startswith('--') ]
-	Log(rules)
-	if '--harvest' in rules:
-		harvest = True
-		h_rules = [_hr for _hr in argv if _hr.startswith('%') ]
-	Log(h_rules)
+	globals()['targets'] = targets
+	globals()['scan_data'] = scan_data
+	globals()['filters'] = filters
+	globals()['rules'] = [ _r for _r in argv if _r.startswith('--') ]
+	globals()['harvest'] = '--harvest' in rules
+	globals()['h_rules'] = [_hr for _hr in argv if _hr.startswith('%') ]
 
 def scan_clients() -> None:
 	"""Starts scanning provided clients"""
@@ -110,10 +106,7 @@ def display_response(target:str, site:str, data, is_valid:bool) -> None:
 
 
 def main() -> None:
-	try:
-		check_args()
-	except IndexError:
-		exit()
+	load_args()
 	try:
 		scan_clients() if '--harvest' not in argv else harvest_clients(targets, scan_data)
 	except KeyboardInterrupt:
