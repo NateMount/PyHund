@@ -1,0 +1,21 @@
+#! /usr/bin/env python3.10
+import requests as r
+import re
+
+#Getting sites from user in
+while True:
+  site = input("SITE << ")
+  if site == 'qq':
+    break
+  _s = r.get(site.format(input("NAME << ")))
+  print(_s.url)
+  print(_s.status_code)
+  open('out', 'w').write(_s.text.replace('\n', ''))
+
+#Looking for tokens in sites
+while True:
+  try:
+    x = re.search( fr"{input('TOKEN <<')}", open('out', 'r').read() )
+    print(x[0])
+  except TypeError:
+    pass
