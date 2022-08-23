@@ -2,8 +2,7 @@
 
 from sys import exit, argv
 from src.util import Log
-from src.webscraper import get, get_hyper, get_site
-from src.validator import verify
+from src.webscraper import get, get_site, verify
 from src.harvester import harvest_clients
 
 def display_help() -> None:
@@ -87,7 +86,7 @@ def scan_clients() -> None:
 				if site_data['verify-method'] not in filters['verify-method']:
 					continue
 
-			_d = get(_s, _t) if site_data['http-version'] == 1 else get_hyper(_s, _t)
+			_d = get(_s, _t) if site_data['http-version'] == 1 else None
 
 			display_response(_t, _s, _d, verify(_s, _d))
 		print('')

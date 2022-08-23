@@ -1,6 +1,7 @@
 #! /usr/bin/env python3.9
 
 import json
+import re
 import requests as r
 from src.util import Log
 
@@ -13,12 +14,6 @@ def get_site(site_name:str) -> dict:
 		return site_index[site_name]
 	except KeyError:
 		return None
-
-
-def get_hyper(site_name:str, username:str):
-	"""get site using hyper from name and target username"""
-
-	raise NotImplementedError
 
 
 def get(site_name:str, username:str):
@@ -40,3 +35,22 @@ def get(site_name:str, username:str):
 		return r.get(site_data["url"].format(username), headers=_h, cookies=_c)
 	except r.ConnectionError:
 		return None
+
+
+def verify(site_name:str, site) -> bool:
+	"""Used to verify a site's response data"""
+
+	_d:dict = get_site(site_name)
+
+	if not _d:
+		return False
+	
+	match _d['verify-method']:
+		case 'status':
+			return site.status_code == int(_d['verify-str']) if 'verify-str' in _d else site.status_code == 200
+		case 'url':
+			return _d['verify-str'] in site.url
+		case 'match':
+			return re.search(_data['verify-method'], site.text) != None
+		case _:
+			return False
