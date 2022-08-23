@@ -2260,5 +2260,17 @@
       "Joined": "(?<=Since\\s)[\\w\\,\\.\\s]+(?=<)",
       "Location": "(?<=</span>\\s+)\\w+(?=\\s)"
     }
+  },
+  "pronouns.page": {
+    "http-version": 1,
+    "url": "https://en.pronouns.page/@{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
+  },
+  "mtgsalvation": {
+    "http-version": 1,
+    "url": "https://www.mtgsalvation.com/members/{}",
+    "verify-method": "status",
+    "harvester-tokens": {}
   }
 }
